@@ -1,0 +1,369 @@
+{
+  "merged_schema_item": {
+    "problem_pattern": "An essay anecdote or described action is authentic but generic — it could plausibly be told by many applicants with similar backgrounds, and it fails to clear the distinctiveness threshold required by competitive admissions. The action does not demonstrate the depth, specificity, initiative, or structural payoff needed to differentiate the writer, even though the underlying experience is real.",
+    "shared_tacit_knowledge": "In competitive college admissions, authenticity is necessary but not sufficient. An anecdote must additionally pass a 'so what / is this enough?' test: if many applicants could credibly tell the same story, the writer must upgrade it — by raising the stakes, escalating the action, deepening the meaning, or giving it a structural payoff that only this essay could earn. The expert applies this lens by asking whether the described behavior is something most people would do (baseline) or something that reveals exceptional care, initiative, or growth (differentiator).",
+    "situations": [
+      {
+        "situation_id": "a",
+        "timestamp_range": {
+          "start_mmss": "6:41",
+          "end_mmss": "7:17"
+        },
+        "specific_problem": "The essay presents the author's actions at the Lazy Susan (speaking up for quieter children, sacrificing turns to spin the Lazy Susan) as evidence of being a 'table diplomat,' but these actions are relatively ordinary and low-stakes, lacking the specificity and depth of care that would distinguish the applicant for a highly competitive admissions context.",
+        "framing_of_genericness": "threshold-of-impressiveness — the action is too low-stakes/baseline-prosocial to justify admission to a top school",
+        "active_factor_ids": [
+          "A3",
+          "D1",
+          "G1"
+        ],
+        "chosen_solution_id": "S1_replace_with_higher_stakes_substitute",
+        "rationale": "The expert's framing question — 'Is this really enough to demand admission to a top 10, top 20 school?' — locates the deficiency in the action itself (D1: the underlying behavior is too baseline-prosocial), not in how it's rendered. Because a higher-stakes alternative was available in the writer's actual family experience (A3: managing an aunt's severe allergy), substitution was the most efficient lever. Other strategies that operate on rendering (S2, S3, S8) wouldn't address the root problem; structural strategies (S6) weren't on the table because no specific earlier scene was set up to mirror in this section."
+      },
+      {
+        "situation_id": "b",
+        "timestamp_range": {
+          "start_mmss": "9:40",
+          "end_mmss": "10:51"
+        },
+        "specific_problem": "The 'Art of Spreading Love' section describes the student ordering grandparents' favorite dishes in Mandarin, which the expert finds too generic and common ('many Asian kids could say something similar'). The anecdote doesn't demonstrate 'above and beyond capabilities' — it's a relatable but unremarkable action that fails to distinguish this applicant.",
+        "framing_of_genericness": "differentiation-from-similar-applicants — the action is one many demographically similar applicants would write about",
+        "active_factor_ids": [
+          "A1",
+          "G4"
+        ],
+        "chosen_solution_id": "S6_full_circle_role_reversal",
+        "rationale": "The expert chose the full-circle solution because the essay had already built the structural setup for it (A1: opening scene of grandparents placing food on the student's plate; conclusion alluding to 'deliberately violate the first rule'). With this affordance present, the cheapest move was structural — reusing existing material in mirrored form (G4) — rather than substituting the action or adding new content. The expert's deletion of the conclusion phrasing at 10:45 confirms the intent to land the structural payoff. The expert noted all three escalation strategies (S4, S5, S6) were viable and could be combined ('one or all three of these'), but identified S6 as the strongest single choice because the structural setup made it nearly free."
+      }
+    ],
+    "all_solution_strategies": [
+      {
+        "solution_id": "S1_replace_with_higher_stakes_substitute",
+        "strategy_name": "Replace with higher-stakes substitute action",
+        "operation_signature": "Substitute one action for a different kind of action that is more demanding, proactive, or specific.",
+        "general_description": "When the underlying action itself is too baseline (not just under-described), swap it for a different action from the writer's actual experience that demonstrates an exceptional, less common version of the same character trait. The replacement is a different kind of behavior, not more of the same.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Instead of 'speaking up for quieter children' and 'sacrificing turns to spin the Lazy Susan,' describe noticing that an aunt is severely allergic to peanuts and meticulously screening every dish ordered to ensure none contains the allergen — substituting baseline prosocial behavior with proactive medical vigilance."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Instead of 'ordering grandparents' favorite dishes in Mandarin,' describe translating between the doctor and grandpa during a hospital appointment, mediating a high-stakes medical conversation in Mandarin under pressure — substituting routine restaurant Mandarin with a moment where Mandarin literally mattered."
+          }
+        ],
+        "relevant_factor_ids": [
+          "A3",
+          "D1",
+          "G1"
+        ],
+        "solution_type": "mentioned",
+        "first_appeared_in_situation": "a",
+        "transcript_grounding": {
+          "quote": "if you mentioned that one of my cousins, one of my aunts had a dietary restriction was like severely allergic to X. And I would always, always make a special effort and pay attention to detail to make sure that none of the dishes were cooked with peanuts or something like that. That would show up even more care.",
+          "timestamp_mmss": "7:00-7:17",
+          "timestamp_seconds": 420
+        }
+      },
+      {
+        "solution_id": "S2_layer_cumulative_details",
+        "strategy_name": "Layer cumulative small specific details",
+        "operation_signature": "Keep the existing scope and action, but add many granular specifics that accumulate into evidence of hyper-attentiveness.",
+        "general_description": "When the action's direction is right but the writing feels thin, build a mosaic of small concrete details — preferences memorized, patterns tracked, micro-adjustments made — so that exceptional care is conveyed through density rather than through one dramatic moment.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Keep the table diplomat framing but add granular details: tracking which younger cousin always got passed over, remembering aunt's preference for cold dishes over hot, quietly nudging the Lazy Susan past relatives who'd already been served twice — building hyper-attentiveness through accumulated specifics."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Keep the dish-ordering frame but add granular dietary knowledge: knowing grandpa wants tofu well-fried not soft, knowing grandma can't eat spicy because of her ulcer, ordering grandma's dish first because she eats slowly — accumulating micro-attentiveness through specifics only this writer would know."
+          }
+        ],
+        "relevant_factor_ids": [
+          "A4"
+        ],
+        "solution_type": "extended",
+        "first_appeared_in_situation": "a",
+        "transcript_grounding": null,
+        "note": "Inferred extension by schema author; not directly mentioned by expert."
+      },
+      {
+        "solution_id": "S3_raise_emotional_relational_stakes",
+        "strategy_name": "Raise emotional/relational stakes by showing impact on a specific person",
+        "operation_signature": "Add a visible 'before/after' for a specific other person, making the action's consequence tangible.",
+        "general_description": "When the action exists but its impact is invisible, dramatize what changed for a specific other person as a result. Show that person's vulnerable state, the writer's intervention, and the visible shift afterward — turning a described behavior into an observable consequence.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Show a specific moment where a shy seven-year-old cousin had been silent the entire meal, eyes on her plate, until the writer noticed and quietly handed her the fish dish — and describe her visible relief, the way she finally looked up."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Show a specific moment where grandma had been sitting confused, unable to follow the rapid dialect around the table, until the writer ordered her favorite dish in Mandarin and explained the menu to her — and describe her face lighting up as she rejoined the conversation."
+          }
+        ],
+        "relevant_factor_ids": [
+          "D4",
+          "G3"
+        ],
+        "solution_type": "extended",
+        "first_appeared_in_situation": "a",
+        "transcript_grounding": null,
+        "note": "Inferred extension by schema author; not directly mentioned by expert."
+      },
+      {
+        "solution_id": "S4_deepen_with_backstory_investigation",
+        "strategy_name": "Deepen by investigating the 'why' / backstory",
+        "operation_signature": "Investigate and surface untapped meaning, history, or context behind the surface action.",
+        "general_description": "Treat the action as an entry point and act like an 'investigative journalist' — ask why the subject of the action matters to the people involved. Surface family history, cultural significance, or hidden motivation that the writer didn't previously know, transforming a surface gesture into a layered understanding.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Beyond noticing who got skipped, the writer asks the quieter cousin afterward why she always holds back at family meals — discovering she feels ashamed of her broken Mandarin and worries about being judged — reframing the diplomat role as protecting cultural belonging, not just enforcing fairness at the table."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Sit with grandpa and ask why scallion pancake is his favorite — discovering it was the only dish his mother could reliably make during years of scarcity, tying the simple act of ordering to ancestral resilience and family memory."
+          }
+        ],
+        "relevant_factor_ids": [
+          "A2",
+          "G2"
+        ],
+        "solution_type": "mentioned",
+        "first_appeared_in_situation": "b",
+        "transcript_grounding": {
+          "quote": "really take a moment to pause, sit down with grandpa grandma and almost act as a investigative journalist and ask them, why is this your favorite dish? ... So that's one way you dig deeper into the why. And that would be a great way to highlight intellectual curiosity and more vulnerability.",
+          "timestamp_mmss": "9:26-9:58",
+          "timestamp_seconds": 566
+        }
+      },
+      {
+        "solution_id": "S5_escalate_action",
+        "strategy_name": "Escalate the action — extend the same impulse further",
+        "operation_signature": "Keep the same general impulse but transform the writer's role from passive/consumer to active/creator.",
+        "general_description": "When the writer's role is passive in the described action, take the same caring impulse and push it into a more ambitious, creative, or laborious form. The action keeps its direction but moves up the agency scale — receiving becomes giving, ordering becomes making, observing becomes building.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Move from 'speaking up for quiet kids' to designing a household ritual at family meals — assigning each kid a turn to spin the Lazy Susan in clockwise order, eliminating the imbalance entirely and turning improvised fairness into infrastructure."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Move from ordering the dish in Mandarin at the restaurant to talking to the chef, learning the recipe, and cooking it at home for the grandparents — turning passive ordering into active labor of love, transforming consumer into creator."
+          }
+        ],
+        "relevant_factor_ids": [
+          "D3",
+          "G1"
+        ],
+        "solution_type": "mentioned",
+        "first_appeared_in_situation": "b",
+        "transcript_grounding": {
+          "quote": "this student gets very, very creative and they recreate the dish. So after ordering it in a restaurant, they talk to the chef and they learn how this dish is made. And then they actually go home, they make it for their grandparents.",
+          "timestamp_mmss": "9:58-10:15",
+          "timestamp_seconds": 598
+        }
+      },
+      {
+        "solution_id": "S6_full_circle_role_reversal",
+        "strategy_name": "Full-circle narrative arc with role reversal",
+        "operation_signature": "Mirror an earlier scene with the writer now in the giving/active role, completing a structural arc.",
+        "general_description": "When an earlier scene establishes a specific dynamic with the writer in one role, end with a mirrored scene in which the writer occupies the opposite role — demonstrating internalized growth through structural echo rather than through new content. The payoff comes from architecture: same shape, reversed positions.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Mirror an opening scene where the writer was once the silent kid getting skipped — and end with the writer now spinning the Lazy Susan toward another silent cousin, completing a circle from overlooked child to advocate for overlooked guests."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Mirror the opening scene where grandparents placed food on the writer's plate — and end with the writer placing food on grandpa's plate, completing a role-reversal that demonstrates the writer has internalized the cultural language of love and now speaks it back."
+          }
+        ],
+        "relevant_factor_ids": [
+          "A1",
+          "G4"
+        ],
+        "solution_type": "mentioned",
+        "first_appeared_in_situation": "b",
+        "transcript_grounding": {
+          "quote": "this is kind of a full circle moment is the student puts the food on grandpa's plate, just like grandpa and grandma was putting food on their plate in the first scene. Now we have a full circle sort of arc and they are showing love to the grandparents in the way that their grandparents understand.",
+          "timestamp_mmss": "10:15-10:34",
+          "timestamp_seconds": 615
+        }
+      },
+      {
+        "solution_id": "S7_combine_multiple_strategies",
+        "strategy_name": "Combine multiple upgrade strategies in one anecdote",
+        "operation_signature": "Layer two or more of the above strategies together within a single climactic anecdote.",
+        "general_description": "When word count and narrative space permit, stack strategies — investigate the why, escalate the action, and land it in a structurally meaningful place — so a single anecdote carries multiple kinds of upgrade simultaneously. The expert explicitly notes the strategies are not mutually exclusive.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "In the table diplomat anecdote, layer (a) the higher-stakes substitute of allergy management, (b) granular cumulative details about each family member's preferences, and (c) the visible impact on the shy cousin who finally smiled — combining content upgrade, density, and emotional payoff in one rich anecdote."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "In the dish-ordering anecdote, layer (a) asking grandpa about the dish's family history, (b) learning to cook it from the chef, and (c) placing the homemade dish on grandpa's plate at a family dinner — combining investigation, escalation, and full circle in one climactic anecdote."
+          }
+        ],
+        "relevant_factor_ids": [
+          "A5",
+          "G4"
+        ],
+        "solution_type": "mentioned",
+        "first_appeared_in_situation": "b",
+        "transcript_grounding": {
+          "quote": "So you could do one or all three of these.",
+          "timestamp_mmss": "10:30-10:34",
+          "timestamp_seconds": 630
+        }
+      },
+      {
+        "solution_id": "S8_replace_with_irreplaceable_specific_scene",
+        "strategy_name": "Replace summary with single irreplaceably specific scene",
+        "operation_signature": "Narrow scope from habit/summary to one concrete moment with sensory and proper-noun specificity.",
+        "general_description": "When the writing is in habit-mode ('I always...,' 'I would often...'), zoom into one specific moment with proper nouns, sensory detail, and exact actions — making the paragraph one no other applicant could plausibly have written. The improvement comes from rendering, not from changing the action.",
+        "examples": [
+          {
+            "applied_to_problem": "item_a",
+            "example": "Replace the general 'table diplomat' summary with one specific dinner — the exact cousin's name (Maya, age six), the exact dish that almost got skipped (the steamed fish her grandmother made every winter), the exact glance that passed between writer and aunt as the writer rotated the Lazy Susan back."
+          },
+          {
+            "applied_to_problem": "item_b",
+            "example": "Replace 'I constantly begged my dad to fill me in on their favorite dishes' with one specific lunar new year dinner — the exact stumble in pronouncing 'yúxiāng qiézi' three times, the waitress's puzzled expression, grandpa's slow wink as he understood what the writer was trying to do."
+          }
+        ],
+        "relevant_factor_ids": [
+          "D2"
+        ],
+        "solution_type": "extended",
+        "first_appeared_in_situation": "b",
+        "transcript_grounding": null,
+        "note": "Inferred extension by schema author; not directly mentioned by expert."
+      }
+    ],
+    "all_contextual_factors": [
+      {
+        "factor_id": "A1",
+        "factor_name": "Mirrorable earlier scene exists",
+        "category": "affordance",
+        "general_description": "An earlier scene or established motif in the essay sets up a specific dynamic that could be echoed or reversed later for structural payoff. May include a conclusion that already gestures back to the opening.",
+        "supports_solutions": [
+          "S6_full_circle_role_reversal"
+        ]
+      },
+      {
+        "factor_id": "A2",
+        "factor_name": "Untapped backstory available",
+        "category": "affordance",
+        "general_description": "There is meaning, history, or context behind the surface action that the writer hasn't yet explored — accessible through conversation, memory, or research.",
+        "supports_solutions": [
+          "S4_deepen_with_backstory_investigation"
+        ]
+      },
+      {
+        "factor_id": "A3",
+        "factor_name": "Higher-stakes alternative action available",
+        "category": "affordance",
+        "general_description": "The writer has, in actual experience, a different and more demanding action that demonstrates the same character trait — making substitution viable rather than forcing fabrication.",
+        "supports_solutions": [
+          "S1_replace_with_higher_stakes_substitute"
+        ]
+      },
+      {
+        "factor_id": "A4",
+        "factor_name": "Many small related moments available",
+        "category": "affordance",
+        "general_description": "The writer has access to many small, real instances of the same kind of care or attention — enough to build a mosaic, even if no single dramatic moment exists.",
+        "supports_solutions": [
+          "S2_layer_cumulative_details"
+        ]
+      },
+      {
+        "factor_id": "A5",
+        "factor_name": "Word count and structure permit layering",
+        "category": "affordance",
+        "general_description": "The essay has enough remaining narrative space to combine multiple upgrade strategies within one anecdote without crowding out other essential material.",
+        "supports_solutions": [
+          "S7_combine_multiple_strategies"
+        ]
+      },
+      {
+        "factor_id": "D1",
+        "factor_name": "Action itself is too low-stakes",
+        "category": "diagnostic",
+        "general_description": "The underlying behavior is baseline-prosocial or commonly performed — the deficiency is in the action itself, not merely in how it's described. Better rendering won't fix this.",
+        "supports_solutions": [
+          "S1_replace_with_higher_stakes_substitute",
+          "S5_escalate_action"
+        ]
+      },
+      {
+        "factor_id": "D2",
+        "factor_name": "Writing is in summary/habit-mode",
+        "category": "diagnostic",
+        "general_description": "The paragraph describes habits or recurring patterns ('I always,' 'I would often') rather than rendering one specific moment with sensory and proper-noun specificity.",
+        "supports_solutions": [
+          "S8_replace_with_irreplaceable_specific_scene"
+        ]
+      },
+      {
+        "factor_id": "D3",
+        "factor_name": "Writer's role is passive",
+        "category": "diagnostic",
+        "general_description": "In the described action, the writer is a recipient, observer, or follower rather than an agent or initiator — leaving room for an upgrade to a more active role.",
+        "supports_solutions": [
+          "S5_escalate_action"
+        ]
+      },
+      {
+        "factor_id": "D4",
+        "factor_name": "Action's impact on a specific person is invisible",
+        "category": "diagnostic",
+        "general_description": "The current draft describes the writer's behavior but does not show what changed for a specific other person as a result — the consequence is asserted or implied rather than rendered.",
+        "supports_solutions": [
+          "S3_raise_emotional_relational_stakes"
+        ]
+      },
+      {
+        "factor_id": "G1",
+        "factor_name": "Wants to demonstrate proactive initiative",
+        "category": "goal",
+        "general_description": "The writer's strategic intent is to convey resourcefulness, agency, or self-driven action — solutions that show the writer making something happen serve this goal.",
+        "supports_solutions": [
+          "S1_replace_with_higher_stakes_substitute",
+          "S5_escalate_action"
+        ]
+      },
+      {
+        "factor_id": "G2",
+        "factor_name": "Wants to demonstrate intellectual curiosity",
+        "category": "goal",
+        "general_description": "The writer's strategic intent is to convey reflective depth, inquiry, or willingness to learn — solutions that surface deeper meaning or backstory serve this goal.",
+        "supports_solutions": [
+          "S4_deepen_with_backstory_investigation"
+        ]
+      },
+      {
+        "factor_id": "G3",
+        "factor_name": "Wants to demonstrate emotional attunement",
+        "category": "goal",
+        "general_description": "The writer's strategic intent is to convey relational awareness, empathy, or vulnerability — solutions that render emotional impact and others' inner states serve this goal.",
+        "supports_solutions": [
+          "S3_raise_emotional_relational_stakes"
+        ]
+      },
+      {
+        "factor_id": "G4",
+        "factor_name": "Wants structural/thematic coherence",
+        "category": "goal",
+        "general_description": "The writer's strategic intent is to make the essay feel architecturally tight — every scene tied to a central motif, with payoffs that reward the reader for tracking the throughline.",
+        "supports_solutions": [
+          "S6_full_circle_role_reversal",
+          "S7_combine_multiple_strategies"
+        ]
+      }
+    ]
+  }
+}

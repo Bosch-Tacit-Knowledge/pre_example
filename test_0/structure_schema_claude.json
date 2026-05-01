@@ -1,0 +1,70 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The first section of the essay ends with the author rattling off all 21 rules to relatives, rather than ending on the most important and thematically central rule (Rule #1). The climactic moment—the specific rule about not placing food on others' plates—gets buried instead of being spotlighted as the section's punchline.",
+        "problem_pattern": "A section or scene fails to end on its strongest, most thematically resonant detail, instead diluting the impact by ending on a more generic or less memorable moment."
+      },
+      "knowledge": {
+        "tacit_knowledge": "The ending of a section or scene should land on the most specific, vivid, and thematically important detail. In essay writing, the 'last thing the reader reads' in a section carries disproportionate weight. Ending on a concrete, memorable detail (like a specific rule) is more powerful than ending on a general action (like rattling off 21 rules). This is a form of strategic emphasis through positioning.",
+        "grounding": "The expert explicitly says 'I think it would be more powerful to end with rule number one' and then revises the text so the paragraph climaxes with the announcement of Rule #1: 'DO NOT place food on other people's plates.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Restructure the section so that the most thematically important and specific detail is placed at the end, serving as the section's punchline or climactic beat.",
+          "example": "Instead of ending with 'rattled off all 21 rules on the list,' revise to end with the protagonist proudly announcing Rule #1: 'DO NOT place food on other people's plates,' which is the rule that drives the rest of the essay.",
+          "factors": [
+            "The buried detail is the thematic linchpin of the essay",
+            "The current ending is generic and lacks specificity"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Cut or compress less important details earlier in the section to create more space and emphasis for the key detail at the end.",
+          "example": "Reduce the description of brainstorming the list with William and instead expand the moment of announcing Rule #1, perhaps adding a dramatic beat (e.g., the family's reaction) to heighten the punchline.",
+          "factors": [
+            "The section has limited word count available",
+            "There are multiple competing details that dilute focus"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert restructured the paragraph so it ends with the protagonist proudly announcing Rule #1: 'DO NOT place food on other people's plates,' making the thematic centerpiece the section's punchline."
+      },
+      "contextual_factors": {
+          "all_factors": [
+          {
+          "factor": "The buried detail is the thematic linchpin of the essay",
+          "category": "affordance",
+          "description": "When a detail recurs throughout the essay and drives the narrative arc, it needs prominent positioning, especially at the end of the section that introduces it."
+          },
+          {
+          "factor": "The current ending is generic and lacks specificity",
+          "category": "diagnostic",
+          "description": "Ending on 'rattled off all 21 rules' is vague and doesn't give the reader a concrete image or idea to hold onto, while 'DO NOT place food on other people's plates' is specific and memorable."
+          },
+          {
+          "factor": "The section has limited word count available",
+          "category": "affordance",
+          "description": "In a college essay with strict length constraints, every sentence must earn its place, making it more important to cut generic moments in favor of specific ones."
+          },
+          {
+          "factor": "There are multiple competing details that dilute focus",
+          "category": "diagnostic",
+          "description": "When a section tries to cover too many details, the most important one can get lost, requiring the writer to prioritize and reorder."
+          }
+          ],
+        "current_case": {
+          "most_important_factors": [
+            "The buried detail is the thematic linchpin of the essay",
+            "The current ending is generic and lacks specificity"
+          ],
+          "decision_rationale": "Rule #1 is the central motif of the entire essay—the author later abolishes it, then deliberately violates it in the conclusion. By ending the opening section on this specific rule, the expert ensures the reader registers it as important, creating a satisfying setup for the reversal that follows."
+        }
+      },
+      "timestamp": "2:25"
+    }
+  ]
+}

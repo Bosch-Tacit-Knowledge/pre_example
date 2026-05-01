@@ -1,0 +1,67 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The paragraph where the author actively persuades his brother feels disjointed because it abandons the 'Constitution' and 'Rule #1' motif just introduced. The narrative jumps to active problem-solving too quickly, without adequately exploring the consequences, obstacles, or failure of the newly established rule.",
+        "problem_pattern": "A scene immediately following a thematic hook feels out of place because it fails to connect to the specific motif just established, and it jumps to active problem-solving before establishing a foundational realization or obstacle."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In a montage or motif essay, the narrative arc should progress from passive observation/learning to active problem-solving. The first vignette should typically feature an obstacle where the protagonist's initial assumptions or plans fail, leading to an internal realization. Subsequent scenes then show the protagonist becoming increasingly active and impactful ('superhero-esque'). Furthermore, adjacent anecdotes must maintain tight thematic continuity with the central motif established in the hook.",
+        "grounding": "The expert explicitly states the 'least active to most active' rule for montage essays, criticizes the brother scene for not relating to the Constitution, and rewrites the first scene to include an obstacle (grandparents ignoring the rule) that intentionally debunks the reader's expectation that the Constitution will work."
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Focus the initial scene on an obstacle that thwarts the protagonist's initial plan, delaying action in favor of a foundational realization.",
+          "example": "Keep the narrative focus on the grandparents. Have them stubbornly ignore Rule #1 and place food on the author's plate anyway. This 'quirky obstacle' forces the author to realize that this action is a cultural form of love, rather than a boundary violation.",
+          "factors": [
+            "Position in the essay arc (Beginning/First scene)"
+          ]
+        },
+        {
+          "solution_type": "mentioned",
+          "solution": "Modify the disjointed anecdote so that the character's actions directly interact with the specific rule or motif established in the hook.",
+          "example": "If keeping the brother scene here, have the author purposefully violate Rule #1 by placing food directly on the brother's plate to persuade him to eat, thereby tying the new action directly back to the Constitution motif.",
+          "factors": [
+            "Desire to retain the existing anecdote"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Relocate the active, problem-solving anecdote to a later section of the essay where the protagonist's active agency is expected and earned.",
+          "example": "Move the story of persuading the brother to eat the scallion pancake to the second or third vignette of the essay, where the author is supposed to show more 'superhero-esque' action and impact, applying the realization learned from the grandparents.",
+          "factors": [
+            "Need to show progressive narrative growth"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert drafts a completely new version of the first scene that focuses entirely on the grandparents ignoring the Constitution, creating a funny obstacle that leads to the author's realization about cultural love, thereby delaying the active problem-solving."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "Position in the essay arc (Beginning/First scene)",
+            "description": "In montage essays, early scenes require the protagonist to be more observant, encountering problems that lead to internal realizations rather than immediately solving external problems."
+          },
+          {
+            "factor": "Desire to retain the existing anecdote",
+            "description": "If a writer wants to keep a specific story because it shows strong character traits or initiative, the local details must be explicitly re-linked to the overarching motif."
+          },
+          {
+            "factor": "Need to show progressive narrative growth",
+            "description": "As the essay progresses, the protagonist needs to transition from a passive learner to an active agent making a tangible impact on others."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "Position in the essay arc (Beginning/First scene)"
+          ],
+          "decision_rationale": "The expert chooses to rewrite the scene to focus on an obstacle (grandparents ignoring the rule) because it is the very first scene after the hook. The expert notes that 'the first moment is typically you're the least active, you realize something,' making the passive obstacle-to-realization structure much more appropriate here than the active persuasion of the brother."
+        }
+      },
+      "timestamp": "2:29"
+    }
+  ]
+}

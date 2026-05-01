@@ -1,0 +1,129 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The Taiwan teaching paragraph reads like a report—it lists activities (weekly podcasts, tours, Q&A panels) without vivid storytelling, and it feels disconnected from the Lazy Susan/family dinner theme that drives the rest of the essay.",
+        "problem_pattern": "A paragraph shifts abruptly to a new context and adopts a résumé-like, listing tone instead of continuing the narrative voice and thematic thread established in the essay."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In a personal essay, every scene or example must feel organically connected to the central metaphor or narrative arc. When a writer introduces an external activity (like a job or extracurricular) that requires a conceptual leap to link back to the essay's core theme, the connection often feels forced or 'dubious.' Additionally, strong personal essays maintain a consistent narrative energy—showing moments with sensory detail and humor rather than summarizing accomplishments. A paragraph that merely reports what you did undermines the essay's storytelling mode and reads as padding rather than deepening the reader's understanding of the writer.",
+        "grounding": "The expert explicitly says 'it feels like a report,' the connection 'feels a little bit dubious,' and it 'came a little bit out of left field.' The expert also contrasts it unfavorably with the first scene, noting that scene had 'more humor,' was 'more colorful,' and had a 'more unique' concept. The expert also deletes transitional phrases ('and disconnected,' 'After noticing some students were') as if trying to tighten it before ultimately concluding the whole section is the problem."
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Remove the weakly connected external example and instead deepen the existing scene that already fits the essay's thematic and tonal register, adding more vivid, humorous detail to that scene.",
+          "example": "Cut the Taiwan teaching paragraph entirely and expand the 'table diplomat vs. aging monarchs' scene with funnier, more specific moments of advocating for the quieter children and outwitting the dish-hogging relatives.",
+          "factors": [
+            "The external example's connection to the central metaphor is weak or forced",
+            "An existing scene in the same section already embodies the theme more naturally",
+            "The essay's voice is narrative and humorous, and the external example breaks that tone"
+          ]
+        },
+        {
+          "solution_type": "mentioned",
+          "solution": "Relocate the loosely connected content to a supplemental essay where it can stand on its own without needing to serve the central metaphor of the main essay.",
+          "example": "Move the Taiwan English-teaching experience into a supplemental or activities essay where the teaching story can be told fully on its own terms, without forcing a Lazy Susan connection.",
+          "factors": [
+            "The content has standalone value but doesn't serve the main essay's arc",
+            "The application has other essay slots where this experience would fit better",
+            "Word count or structural economy demands trimming the main essay"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "If keeping the external example, rewrite it in full scene mode—with dialogue, sensory details, and a specific moment—and make the thematic bridge to the central metaphor explicit and emotionally convincing rather than stated abstractly.",
+          "example": "Instead of listing podcast/tours/Q&A, narrate one specific classroom moment where you noticed a quiet student being overlooked, show yourself intervening (echoing the Lazy Susan diplomacy), and draw the parallel through action rather than declaration.",
+          "factors": [
+            "The writer is committed to showing this particular growth dimension",
+            "The external context can be rendered in a single vivid scene rather than a summary",
+            "The thematic connection can be shown through parallel action rather than stated"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Replace the external example with a different moment from the same core setting (the family dinner table) that demonstrates the same quality (inclusivity/advocacy) more naturally.",
+          "example": "Add another Lazy Susan dinner moment—perhaps a holiday meal with extended family—where the writer's role as advocate for overlooked relatives deepened or was challenged in a new way.",
+          "factors": [
+            "The essay benefits from staying in one rich setting rather than jumping contexts",
+            "There are additional real experiences from the core setting that can be drawn upon",
+            "Thematic coherence and tonal consistency are priorities"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert recommends cutting the Taiwan teaching paragraph and instead focusing on making the 'fighting against the monarchs' family dinner scene more vivid, funny, and unique—keeping the essay in its strongest narrative register."
+      },
+      "contextual_factors": {
+      "all_factors": [
+      {
+      "factor": "The external example's connection to the central metaphor is weak or forced",
+      "category": "diagnostic",
+      "description": "When an outside-the-essay-setting example requires the reader to make a large conceptual leap to see the connection to the central metaphor, it undermines coherence. The expert calls the connection 'dubious.'"
+      },
+      {
+      "factor": "An existing scene in the same section already embodies the theme more naturally",
+      "category": "affordance",
+      "description": "If there's already a scene in the essay that demonstrates the same quality, here inclusivity/advocacy, within the core setting, deepening that scene is more effective than adding an external one."
+      },
+      {
+      "factor": "The essay's voice is narrative and humorous, and the external example breaks that tone",
+      "category": "diagnostic",
+      "description": "The first scene's humor and specificity set a tonal standard. A paragraph that reads like a 'report' violates this established voice and lowers the essay's overall quality."
+      },
+      {
+      "factor": "The content has standalone value but doesn't serve the main essay's arc",
+      "category": "diagnostic",
+      "description": "The Taiwan teaching experience is meaningful but may work better in a different essay context where it doesn't need to be subordinated to the Lazy Susan metaphor."
+      },
+      {
+      "factor": "The application has other essay slots where this experience would fit better",
+      "category": "affordance",
+      "description": "College applications typically include supplemental essays or activity descriptions that can showcase teaching experiences more naturally."
+      },
+      {
+      "factor": "Word count or structural economy demands trimming the main essay",
+      "category": "affordance",
+      "description": "Personal essays have limited space; every paragraph must earn its place by advancing the central narrative or metaphor."
+      },
+      {
+      "factor": "The experience described is common rather than distinctive",
+      "category": "diagnostic",
+      "description": "The expert notes that fighting for family members at a Lazy Susan is 'what every Asian kid does,' suggesting the scene needs to be elevated through exceptional storytelling if it stays."
+      },
+      {
+      "factor": "The writer is committed to showing this particular growth dimension",
+      "category": "goal",
+      "description": "If the writer strongly wants to demonstrate teaching/mentoring growth, they may need to find a way to integrate it more seamlessly."
+      },
+      {
+      "factor": "The external context can be rendered in a single vivid scene rather than a summary",
+      "category": "affordance",
+      "description": "If an external example can be condensed into one specific, sensory-rich moment, it has a better chance of fitting the essay's narrative mode."
+      },
+      {
+      "factor": "Thematic connection can be shown through parallel action rather than stated",
+      "category": "affordance",
+      "description": "When the link between two contexts is demonstrated through echoing actions/dynamics rather than declared, it feels more organic."
+      },
+      {
+      "factor": "The essay benefits from staying in one rich setting rather than jumping contexts",
+      "category": "goal",
+      "description": "Essays built around a single extended metaphor or setting often achieve greater depth and coherence by mining that setting thoroughly rather than branching out."
+      }
+      ],
+        "current_case": {
+          "most_important_factors": [
+            "The external example's connection to the central metaphor is weak or forced",
+            "The essay's voice is narrative and humorous, and the external example breaks that tone",
+            "An existing scene in the same section already embodies the theme more naturally",
+            "The experience described is common rather than distinctive"
+          ],
+          "decision_rationale": "The expert chose to recommend cutting the Taiwan paragraph and deepening the monarchs scene because: (1) the Taiwan connection felt 'dubious' and 'out of left field,' breaking the essay's thematic coherence; (2) the paragraph read as a 'report' rather than matching the essay's established narrative-humorous voice; (3) the monarchs scene already existed as a more natural vehicle for demonstrating inclusivity within the Lazy Susan setting; and (4) the table diplomat behavior, while relatable, needed to be made more vivid and funny to reach a 'top 1%' level of distinctiveness, which is better achieved by deepening one scene than splitting attention across two weak ones."
+        }
+      },
+      "timestamp": "7:45"
+    }
+  ]
+}

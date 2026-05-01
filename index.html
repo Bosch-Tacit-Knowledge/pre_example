@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Structure Schema Viewer</title>
+    <style>
+      :root {
+        --bg: #f5efe6;
+        --surface: rgba(255, 251, 245, 0.92);
+        --surface-strong: #fffdfa;
+        --surface-accent: #f4e8d9;
+        --ink: #1d1b18;
+        --muted: #6d665c;
+        --line: rgba(70, 52, 31, 0.12);
+        --accent: #8a4b20;
+        --accent-soft: rgba(138, 75, 32, 0.12);
+        --accent-strong: #0f6a72;
+        --accent-strong-soft: rgba(15, 106, 114, 0.12);
+        --shadow: 0 18px 42px rgba(49, 39, 24, 0.09);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        background:
+          radial-gradient(circle at top left, rgba(15, 106, 114, 0.16), transparent 24%),
+          radial-gradient(circle at top right, rgba(201, 141, 48, 0.14), transparent 20%),
+          linear-gradient(180deg, #faf6ef, var(--bg));
+      }
+
+      code,
+      .mono {
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      }
+
+      .shell {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      .hero {
+        padding: 30px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(255, 250, 243, 0.97), rgba(252, 246, 237, 0.9));
+        box-shadow: var(--shadow);
+        margin-bottom: 18px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 3vw, 3.3rem);
+        line-height: 0.95;
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 78ch;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        padding: 14px 0 18px;
+        backdrop-filter: blur(12px);
+      }
+
+      .toolbar-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255, 252, 246, 0.84);
+        box-shadow: var(--shadow);
+      }
+
+      .jumpbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .jump-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        background: var(--accent-strong-soft);
+        color: var(--accent-strong);
+        text-decoration: none;
+        font-size: 0.96rem;
+      }
+
+      .provider-badge {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--surface-accent);
+        color: var(--accent);
+        font-size: 0.92rem;
+      }
+
+      .guide {
+        margin-bottom: 18px;
+      }
+
+      .guide-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+        gap: 16px;
+      }
+
+      .guide-card {
+        padding: 20px 22px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .guide-card h2 {
+        margin: 0 0 14px;
+        font-size: 1.08rem;
+      }
+
+      .guide-list {
+        margin: 0;
+      }
+
+      .guide-item + .guide-item {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .guide-item dt {
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--accent-strong);
+      }
+
+      .guide-item dd {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .case-grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .case-section {
+        padding: 22px;
+        border-radius: 28px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .case-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .case-header h2 {
+        margin: 0 0 8px;
+        font-size: 1.7rem;
+      }
+
+      .case-header p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .schema-stack {
+        display: grid;
+        gap: 16px;
+      }
+
+      .schema-card {
+        padding: 20px;
+        border-radius: 24px;
+        background: var(--surface-strong);
+        border: 1px solid var(--line);
+      }
+
+      .schema-card h3 {
+        margin: 0 0 14px;
+        font-size: 1.26rem;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .panel {
+        padding: 16px;
+        border-radius: 18px;
+        background: rgba(251, 247, 241, 0.9);
+        border: 1px solid var(--line);
+      }
+
+      .panel h4 {
+        margin: 0 0 12px;
+        font-size: 0.92rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .field {
+        margin-bottom: 12px;
+      }
+
+      .field:last-child {
+        margin-bottom: 0;
+      }
+
+      .field label {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        white-space: pre-wrap;
+        line-height: 1.65;
+      }
+
+      .solutions-grid,
+      .factors-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .solution-card,
+      .factor-card {
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: rgba(255, 252, 248, 0.92);
+      }
+
+      .solution-card.is-chosen,
+      .factor-card.is-linked {
+        border-color: rgba(15, 106, 114, 0.42);
+        background: linear-gradient(180deg, rgba(15, 106, 114, 0.14), rgba(255, 252, 248, 0.98));
+        box-shadow: inset 0 0 0 1px rgba(15, 106, 114, 0.12);
+      }
+
+      .solution-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .solution-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .solution-title,
+      .factor-title {
+        font-weight: 700;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        background: var(--accent-strong-soft);
+        color: var(--accent-strong);
+      }
+
+      .selection-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        background: rgba(15, 106, 114, 0.18);
+        color: var(--accent-strong);
+        font-weight: 700;
+      }
+
+      .list {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--ink);
+      }
+
+      .list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      .empty {
+        color: var(--muted);
+        font-style: italic;
+      }
+
+      .footnote {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .error-card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid rgba(146, 45, 16, 0.18);
+        background: rgba(255, 245, 241, 0.94);
+        box-shadow: var(--shadow);
+      }
+
+      @media (max-width: 1100px) {
+        .guide-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .shell {
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="hero">
+        <div class="eyebrow">Schema Viewer</div>
+        <h1>Tacit knowledge extraction</h1>
+      </section>
+
+      <section class="guide" aria-label="Definitions">
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h2>Solution Choice</h2>
+            <dl class="guide-list">
+              <div class="guide-item">
+                <dt><code>mentioned</code></dt>
+                <dd>The solution was mentioned or used in the video.</dd>
+              </div>
+              <div class="guide-item">
+                <dt><code>extended</code></dt>
+                <dd>The solution choice was inferred by the LLM.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="guide-card">
+            <h2>Contextual Factors</h2>
+            <dl class="guide-list">
+              <div class="guide-item">
+                <dt>Affordance</dt>
+                <dd>What the essay or material makes available. These determine whether a strategy is feasible.</dd>
+              </div>
+              <div class="guide-item">
+                <dt>Diagnostic</dt>
+                <dd>What is wrong with the current draft. These determine whether a strategy is needed.</dd>
+              </div>
+              <div class="guide-item">
+                <dt>Goal</dt>
+                <dd>What kind of impression the writer wants to leave. These determine whether a strategy is desirable.</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <nav class="toolbar">
+        <div class="toolbar-inner">
+          <div class="jumpbar" id="jumpbar"></div>
+          <div class="provider-badge" id="providerBadge"></div>
+        </div>
+      </nav>
+
+      <main class="case-grid" id="content"></main>
+    </div>
+
+    <script>
+      const provider = new URLSearchParams(window.location.search).get("provider") || "claude";
+
+      const schemaSources = [
+        {
+          id: "test-0",
+          label: "Test 0",
+          folder: "test_0"
+        },
+        {
+          id: "test-1",
+          label: "Test 1",
+          folder: "test_1"        
+        },
+        {
+          id: "test-merged",
+          label: "Merged Case",
+          folder: "test_merged"
+        },
+      ].map((group) => ({
+        ...group,
+        file: group.file || `${group.folder}/structure_schema_${provider}.json`,
+      }));
+
+      const embeddedFallbacks = {
+        gemini: {
+          test_1: {
+            schema_items: [
+              {
+                problem: {
+                  specific_problem:
+                    "The student's anecdote about struggling to order food in Mandarin to connect with their grandparents, while genuine, relies on a common narrative trope for Asian-American applicants and fails to demonstrate unique or 'above and beyond' capabilities.",
+                  problem_pattern:
+                    "Relying on a common, predictable demographic trope or highly typical relatable experience without elevating the narrative to showcase distinct, proactive personal traits (e.g., intellectual curiosity, high-level initiative, or unique structural creativity).",
+                },
+                knowledge: {
+                  tacit_knowledge:
+                    "Admissions essays need to differentiate the applicant. If a student writes about a common cultural or demographic experience, the 'realness' of the story isn't enough; the applicant's response to that situation must be exceptionally proactive, deeply inquisitive, or structurally masterful to demonstrate standout qualities to an admissions officer.",
+                  grounding:
+                    "The expert notes the story is 'very, very real' but explicitly states 'many Asian kids could say something similar' and it lacks 'above and beyond capabilities.' The expert then provides three specific revisions to force the narrative into showing distinct traits like intellectual curiosity, creativity, or thematic resolution.",
+                },
+                solutions: [
+                  {
+                    solution_type: "mentioned",
+                    solution:
+                      "Act as an 'investigative journalist' to dig deeper into the historical or emotional 'why' behind the cultural artifact.",
+                    example:
+                      "Instead of just ordering the dish, the student sits down with the grandparents and asks why the tofu is their favorite, uncovering stories about past generations or cultural festivals.",
+                    factors: ["Desired Trait Emphasis: Highlighting intellectual curiosity and emotional vulnerability."],
+                  },
+                  {
+                    solution_type: "mentioned",
+                    solution:
+                      "Take exceptional, creative action to recreate or master the subject matter, showing high initiative.",
+                    example:
+                      "The student talks to the restaurant chef, learns how to make the dish, and cooks it for their grandparents at home instead of just ordering it.",
+                    factors: ["Desired Trait Emphasis: Showcasing creativity, dedication, and proactive problem-solving."],
+                  },
+                  {
+                    solution_type: "mentioned",
+                    solution:
+                      "Create a 'full circle' narrative arc by physically mirroring an action from the essay's opening scene.",
+                    example:
+                      "The student places the food directly onto the grandparent's plate, mirroring how the grandparents put food on the student's plate in the first paragraph, showing love in their language.",
+                    factors: [
+                      "Existing Narrative Structure: The presence of an established motif or hook in the introduction that can provide a deeply satisfying, cohesive resolution.",
+                    ],
+                  },
+                  {
+                    solution_type: "extended",
+                    solution: "Bridge the familial cultural connection to broader community leadership or teaching.",
+                    example:
+                      "Taking the cultural stories or recipes learned from the grandparents' favorite dishes and sharing them with the Taiwanese students in their weekly podcasts, connecting the two separate spheres of the applicant's life.",
+                    factors: ["Desired Trait Emphasis: Showcasing community impact and leadership synthesis."],
+                  },
+                ],
+                chosen_solution: {
+                  solution_index: 2,
+                  solution_summary:
+                    "Creating a 'full circle' moment where the student puts food on the grandparent's plate, mirroring the opening scene and paying off the 'constitution' hook.",
+                },
+                contextual_factors: {
+                  all_factors: [
+                    {
+                      factor: "Applicant Demographics / Tropes",
+                      description:
+                        "Whether the current narrative falls into a predictable bucket or common trope for the applicant's demographic, creating an urgent need for an 'above and beyond' pivot.",
+                    },
+                    {
+                      factor: "Desired Trait Emphasis",
+                      description:
+                        "Which core capability the applicant most needs or wants to demonstrate to admissions (e.g., intellectual curiosity, high-initiative creativity, or emotional intelligence).",
+                    },
+                    {
+                      factor: "Existing Narrative Structure",
+                      description:
+                        "The presence of strong themes, rules (like 'Rule #1'), or distinct scenes introduced early in the essay that can be structurally leveraged for a satisfying conclusion.",
+                    },
+                  ],
+                  current_case: {
+                    most_important_factors: ["Existing Narrative Structure"],
+                    decision_rationale:
+                      "The expert explicitly chooses the third option ('full circle moment') upon reading the conclusion. Because the essay's hook and conclusion already revolve around 'violating the first rule of my old constitution' (which specifically forbade putting food on other people's plates), having the student physically put food on the grandparents' plates perfectly aligns with and pays off the essay's central structural metaphor.",
+                  },
+                },
+              },
+            ],
+          },
+          test_2: {
+            schema_items: [
+              {
+                problem: {
+                  specific_problem:
+                    "The essay awkwardly pivots from a humorous personal anecdote about dinner table dynamics (the Lazy Susan) to a dry summary of an extracurricular activity (teaching English in Taiwan).",
+                  problem_pattern:
+                    "The 'Resume Pivot': forcibly inserting an unrelated extracurricular achievement into a personal narrative to showcase accomplishments, which breaks narrative cohesion, shifts the tone from storytelling to reporting, and makes thematic connections feel contrived.",
+                },
+                knowledge: {
+                  tacit_knowledge:
+                    "Personal statements should prioritize narrative depth and thematic continuity over breadth of accomplishments. Forcing a connection between a quirky personal metaphor and a resume item usually results in a jarring shift in tone. If the bridging action in the narrative is commonplace (e.g., spinning a Lazy Susan for family), it lacks the unique weight needed to convincingly earn a pivot to a profound life lesson or professional achievement. It is better to use the word count to fully develop a unique personal scene, saving distinct accomplishments for supplemental essays.",
+                  grounding:
+                    "The expert states the Taiwan paragraph 'feels like a report' and 'came out of left field' with a 'dubious' connection. They suggest focusing on 'nailing' the dinner table scene instead, explicitly advising that the teaching experience 'might be better for a supplemental essay.' They also note that the bridge action (serving family) is 'what every Asian kid does,' making the pivot unearned.",
+                },
+                solutions: [
+                  {
+                    solution_type: "mentioned",
+                    solution:
+                      "Remove the unrelated extracurricular paragraph and dedicate the space to expanding the core narrative scene.",
+                    example:
+                      "Cut the paragraph about teaching English in Taiwan and use that space to flesh out the humorous 'table diplomat' scene, detailing the funny ways the writer 'fought against the monarchs' at the dinner table.",
+                    factors: [
+                      "Availability of supplemental essays (to house the cut achievement)",
+                      "Strength and uniqueness of the core narrative scene",
+                    ],
+                  },
+                  {
+                    solution_type: "extended",
+                    solution:
+                      "Retain the extracurricular, but rewrite it to match the tone and directly mirror the central metaphor to create a cohesive thematic bridge.",
+                    example:
+                      "Keep the Taiwan teaching paragraph, but rewrite it to extend the 'diplomat' and 'monarchs' metaphor, showing exactly how the specific dinner table negotiation tactics were applied to resolve classroom dynamics, rather than just listing activities like podcasts and tours.",
+                    factors: ["Relevance of the extracurricular to the core metaphor", "Lack of supplemental essay space"],
+                  },
+                ],
+                chosen_solution: {
+                  solution_index: 0,
+                  solution_summary:
+                    "The expert suggests removing the Taiwan teaching paragraph, moving it to a supplemental essay, and using the freed space to deeply focus on 'nailing' the humorous dinner table scene.",
+                },
+                contextual_factors: {
+                  all_factors: [
+                    {
+                      factor: "Availability of supplemental essays",
+                      description:
+                        "If the student has other essays for the application, resume items can be safely moved there, freeing the main personal statement for cohesive storytelling.",
+                    },
+                    {
+                      factor: "Strength and uniqueness of the core narrative scene",
+                      description:
+                        "If the main scene has enough depth, humor, and unique detail, it can carry the entire essay without needing to pivot to a formal accomplishment.",
+                    },
+                    {
+                      factor: "Relevance of the extracurricular to the core metaphor",
+                      description:
+                        "How easily and naturally the extracurricular can be described using the established metaphorical language without sounding forced.",
+                    },
+                    {
+                      factor: "Uniqueness of the bridging action",
+                      description:
+                        "Whether the action connecting the metaphor to the real-world achievement is distinct enough to justify a profound realization (versus a cliché or commonplace action).",
+                    },
+                  ],
+                  current_case: {
+                    most_important_factors: [
+                      "Availability of supplemental essays",
+                      "Strength and uniqueness of the core narrative scene",
+                      "Uniqueness of the bridging action",
+                    ],
+                    decision_rationale:
+                      "The expert identifies that the connection to Taiwan is 'dubious' and 'out of left field,' while the bridging action (spinning the Lazy Susan) is too commonplace to justify the pivot. Recognizing that the earlier scene (the constitution) was much stronger and more unique, the expert advises leaning into the core narrative and moving the Taiwan achievement to a supplemental essay where it won't disrupt the narrative flow.",
+                  },
+                },
+              },
+            ],
+          },
+          test_3: {
+            schema_items: [
+              {
+                problem: {
+                  specific_problem:
+                    "The writer abruptly transitions from a family dinner scene to a paragraph about teaching English in Taiwan to demonstrate 'inclusivity'. This makes the essay feel like a dry resume report with a forced, dubious thematic connection. Additionally, the base anecdote of acting as a 'table diplomat' at the Lazy Susan lacks the uniqueness of the previous 'constitution' idea, feeling too much like a standard cultural trope.",
+                  problem_pattern:
+                    "Shoehorning unrelated extracurricular achievements into a personal narrative metaphor. This disrupts narrative flow, shifts the tone from storytelling to a dry 'report', and often relies on cliché or expected anecdotes to force a thematic link.",
+                },
+                knowledge: {
+                  tacit_knowledge:
+                    "Personal statements should prioritize narrative cohesion, authentic voice, and unique framing over cramming in resume achievements. Forcing an extracurricular activity into a personal metaphor often breaks immersion and makes the essay sound like a list or 'report'. Such distinct achievements are better suited for supplemental essays. Furthermore, common cultural experiences (e.g., serving food to elders) require a highly unique lens (like the 'constitution' concept) to stand out; otherwise, they just describe generic, expected behavior.",
+                  grounding:
+                    "The expert notes the Taiwan teaching paragraph 'feels like a report' and 'came out of left field,' calling the connection 'dubious.' They explicitly suggest the Taiwan story 'might be better for a supplemental essay.' They also compare the second scene to the first, noting the 'constitution' was unique, whereas 'what you're doing here is like what every Asian kid does... it's not top 1%.'",
+                },
+                solutions: [
+                  {
+                    solution_type: "mentioned",
+                    solution:
+                      "Remove the forced extracurricular paragraph entirely to preserve narrative cohesion, and deepen the personal/family anecdote with more unique details and humor.",
+                    example:
+                      "Cut the paragraph about teaching in Taiwan and save it for a supplemental essay. Use the freed-up space to focus on 'nailing this moment' at the dinner table, perhaps by fighting the 'aging monarchs' using the same humorous, specific tone established by the 'Lazy Susan constitution' in the first paragraph.",
+                    factors: [
+                      "Availability of Supplemental Essays",
+                      "Narrative Cohesion vs. Extracurricular Inclusion",
+                      "Uniqueness of the Anecdote",
+                    ],
+                  },
+                  {
+                    solution_type: "extended",
+                    solution:
+                      "If the extracurricular must be included, completely rewrite the transition and the paragraph to sustain the established narrative tone rather than summarizing facts.",
+                    example:
+                      "Instead of saying 'As an English teacher... I scrapped all my lesson material,' carry the 'diplomat' and 'constitution' metaphors directly into the classroom. Describe the classroom dynamics using the exact whimsical, rule-making vocabulary of the Lazy Susan to make the thematic jump feel seamless and narrative-driven rather than report-like.",
+                    factors: [
+                      "Availability of Supplemental Essays",
+                      "Narrative Cohesion vs. Extracurricular Inclusion",
+                    ],
+                  },
+                ],
+                chosen_solution: {
+                  solution_index: 0,
+                  solution_summary:
+                    "The expert recommends cutting the Taiwan teaching paragraph (saving it for a supplemental essay) and focusing instead on deepening the humor and uniqueness of the family dinner scene to match the quality of the 'constitution' paragraph.",
+                },
+                contextual_factors: {
+                  all_factors: [
+                    {
+                      factor: "Narrative Cohesion vs. Extracurricular Inclusion",
+                      description:
+                        "Whether the extracurricular activity naturally fits the central metaphor of the essay or if it feels forced and disrupts the storytelling flow.",
+                    },
+                    {
+                      factor: "Availability of Supplemental Essays",
+                      description:
+                        "Whether the student has other application essays where they can showcase this specific resume achievement.",
+                    },
+                    {
+                      factor: "Uniqueness of the Anecdote",
+                      description:
+                        "Whether the personal story relies on a common, expected trope (which requires removal or massive elevation) or features a highly specific, memorable angle.",
+                    },
+                  ],
+                  current_case: {
+                    most_important_factors: [
+                      "Narrative Cohesion vs. Extracurricular Inclusion",
+                      "Availability of Supplemental Essays",
+                      "Uniqueness of the Anecdote",
+                    ],
+                    decision_rationale:
+                      "The expert clearly favors narrative cohesion over cramming in activities, stating the connection is 'dubious' and feels like a 'report.' They explicitly suggest the Taiwan story fits better in a 'supplemental essay,' meaning the student doesn't need to force it here. Finally, they point out that the core Lazy Susan scene currently lacks the 'uniqueness' of the first paragraph ('what every Asian kid does'), so the writer needs the essay real estate to improve the main family anecdote instead of rushing off to Taiwan.",
+                  },
+                },
+              },
+            ],
+          },
+        },
+      };
+
+      function safe(value) {
+        if (value === null || value === undefined) return "";
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function normalizeItems(raw) {
+        if (!raw) return [];
+        if (Array.isArray(raw)) return raw;
+        if (Array.isArray(raw.schema_items)) return raw.schema_items;
+        if (raw.merged_schema_item) return [raw.merged_schema_item];
+        return [];
+      }
+
+      function detectSchemaKind(raw) {
+        if (raw && raw.merged_schema_item) {
+          return "merged";
+        }
+        return "standard";
+      }
+
+      function renderField(label, value) {
+        const displayValue = value === null || value === undefined || value === "" ? "—" : value;
+        return `
+          <div class="field">
+            <label>${safe(label)}</label>
+            <div class="content">${safe(displayValue)}</div>
+          </div>
+        `;
+      }
+
+      function renderList(items) {
+        if (!items || !items.length) {
+          return `<div class="empty">None provided.</div>`;
+        }
+        return `<ul class="list">${items.map((item) => `<li>${safe(item)}</li>`).join("")}</ul>`;
+      }
+
+      function toSolutionIndex(value) {
+        if (value === null || value === undefined || value === "") {
+          return null;
+        }
+        const numericValue = Number(value);
+        return Number.isInteger(numericValue) ? numericValue : null;
+      }
+
+      function normalizeFactorKey(value) {
+        return String(value || "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, " ")
+          .trim();
+      }
+
+      function extractFactorKeys(values) {
+        const keys = new Set();
+        for (const value of values || []) {
+          if (value === null || value === undefined) {
+            continue;
+          }
+          const rawValue = String(value).trim();
+          if (!rawValue) {
+            continue;
+          }
+          const candidates = [rawValue];
+          const colonIndex = rawValue.indexOf(":");
+          if (colonIndex > 0) {
+            candidates.push(rawValue.slice(0, colonIndex));
+          }
+          for (const candidate of candidates) {
+            const normalized = normalizeFactorKey(candidate);
+            if (normalized) {
+              keys.add(normalized);
+            }
+          }
+        }
+        return keys;
+      }
+
+      function renderSolutions(solutions, chosenIndex) {
+        if (!solutions || !solutions.length) {
+          return `<div class="empty">No solutions returned.</div>`;
+        }
+
+        return `
+          <div class="solutions-grid">
+            ${solutions
+              .map(
+                (solution, index) => {
+                  const isChosen = index === chosenIndex;
+                  return `
+                  <article class="solution-card${isChosen ? " is-chosen" : ""}">
+                    <div class="solution-top">
+                      <div class="solution-title">${safe(`${index + 1}. ${solution.solution || "Untitled Solution"}`)}</div>
+                      <div class="solution-tags">
+                        <div class="tag">${safe(solution.solution_type || "solution")}</div>
+                        ${isChosen ? `<div class="selection-badge">Chosen</div>` : ""}
+                      </div>
+                    </div>
+                    ${renderField("Example", solution.example)}
+                    ${renderField("Factors", (solution.factors || []).join("\n"))}
+                  </article>
+                `;
+                }
+              )
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderFactors(allFactors, highlightedFactorKeys) {
+        if (!allFactors || !allFactors.length) {
+          return `<div class="empty">No contextual factors returned.</div>`;
+        }
+
+        return `
+          <div class="factors-grid">
+            ${allFactors
+              .map((item) => {
+                const factorKey = normalizeFactorKey(item.factor || "");
+                const isLinked = highlightedFactorKeys.has(factorKey);
+                return `
+                  <article class="factor-card${isLinked ? " is-linked" : ""}">
+                    <div class="solution-top">
+                      <div class="factor-title">${safe(item.factor || "Factor")}</div>
+                      <div class="solution-tags">
+                        ${item.category ? `<div class="tag">${safe(item.category)}</div>` : ""}
+                      </div>
+                    </div>
+                    ${isLinked ? `<div class="selection-badge" style="margin: 8px 0 10px;">Used By Chosen Solution</div>` : ""}
+                    <div class="content">${safe(item.description || "—")}</div>
+                  </article>
+                `;
+              })
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderMergedProblemSummary(situations) {
+        if (!situations || !situations.length) {
+          return "—";
+        }
+
+        return situations
+          .map((situation) => `${situation.situation_id || "Situation"}. ${situation.specific_problem || "—"}`)
+          .join("\n\n");
+      }
+
+      function renderMergedTimestampSummary(situations) {
+        if (!situations || !situations.length) {
+          return "—";
+        }
+
+        return situations
+          .map((situation) => `${situation.situation_id || "Situation"}: ${formatTimestampRange(situation.timestamp_range)}`)
+          .join("\n");
+      }
+
+      function formatTimestampRange(range) {
+        if (!range) {
+          return "—";
+        }
+        if (range.start_mmss && range.end_mmss) {
+          return `${range.start_mmss} - ${range.end_mmss}`;
+        }
+        return range.start_mmss || range.end_mmss || "—";
+      }
+
+      function buildLookup(items, keyName) {
+        const map = new Map();
+        for (const item of items || []) {
+          const key = item && item[keyName];
+          if (key !== null && key !== undefined && key !== "") {
+            map.set(String(key), item);
+          }
+        }
+        return map;
+      }
+
+      function formatMergedFactorRefs(factorIds, factorLookup) {
+        if (!factorIds || !factorIds.length) {
+          return "—";
+        }
+
+        return factorIds
+          .map((factorId) => {
+            const factor = factorLookup.get(String(factorId));
+            return factor ? `${factorId}: ${factor.factor_name || "Unnamed factor"}` : String(factorId);
+          })
+          .join("\n");
+      }
+
+      function formatMergedSolutionRefs(solutionIds, solutionLookup) {
+        if (!solutionIds || !solutionIds.length) {
+          return "—";
+        }
+
+        return solutionIds
+          .map((solutionId) => {
+            const solution = solutionLookup.get(String(solutionId));
+            return solution ? `${solutionId}: ${solution.strategy_name || "Unnamed solution"}` : String(solutionId);
+          })
+          .join("\n");
+      }
+
+      function formatMergedExamples(examples) {
+        if (!examples || !examples.length) {
+          return "—";
+        }
+
+        return examples
+          .map((entry, index) => {
+            const problemLabel = entry.applied_to_problem ? String(entry.applied_to_problem).replace(/^item_/, "") : "";
+            const prefix = problemLabel ? `[${problemLabel}] ` : "";
+            return `${index + 1}. ${prefix}${entry.example || "—"}`;
+          })
+          .join("\n\n");
+      }
+
+      function formatMergedTranscriptGrounding(grounding) {
+        if (!grounding) {
+          return "—";
+        }
+
+        const parts = [];
+        if (grounding.quote) {
+          parts.push(grounding.quote);
+        }
+        if (grounding.timestamp_mmss) {
+          parts.push(`Timestamp: ${grounding.timestamp_mmss}`);
+        }
+        return parts.length ? parts.join("\n") : "—";
+      }
+
+      function renderMergedGroundingSummary(situations, solutionLookup) {
+        if (!situations || !situations.length) {
+          return "—";
+        }
+
+        return situations
+          .map((situation) => {
+            const chosenStrategy = solutionLookup.get(String(situation.chosen_solution_id || ""));
+            const grounding = chosenStrategy && chosenStrategy.transcript_grounding;
+            const timestamp = formatTimestampRange(situation.timestamp_range);
+            if (grounding && (grounding.quote || grounding.timestamp_mmss)) {
+              const quote = grounding.quote || "—";
+              const quoteTimestamp = grounding.timestamp_mmss ? ` (${grounding.timestamp_mmss})` : "";
+              return `${situation.situation_id || "Situation"} [${timestamp}]: ${quote}${quoteTimestamp}`;
+            }
+            return `${situation.situation_id || "Situation"} [${timestamp}]: ${situation.rationale || "—"}`;
+          })
+          .join("\n\n");
+      }
+
+      function extractMergedFocusedFactorKeys(situations) {
+        const keys = new Set();
+        for (const situation of situations || []) {
+          for (const factorId of situation.active_factor_ids || []) {
+            keys.add(String(factorId));
+          }
+        }
+        return keys;
+      }
+
+      function buildMergedFactorUsageMap(situations) {
+        const usageMap = new Map();
+        for (const situation of situations || []) {
+          const situationId = String(situation.situation_id || "").trim();
+          if (!situationId) {
+            continue;
+          }
+          for (const factorId of situation.active_factor_ids || []) {
+            const key = String(factorId);
+            if (!usageMap.has(key)) {
+              usageMap.set(key, new Set());
+            }
+            usageMap.get(key).add(situationId);
+          }
+        }
+        return usageMap;
+      }
+
+      function formatMergedFactorUsageLabel(factorId, usageMap) {
+        const labels = Array.from((usageMap && usageMap.get(String(factorId))) || []);
+        if (!labels.length) {
+          return "";
+        }
+        if (labels.length === 1) {
+          return `Case ${labels[0]}`;
+        }
+        return "Both";
+      }
+
+      function renderMergedChosenSolutions(situations, factorLookup, solutionLookup) {
+        if (!situations || !situations.length) {
+          return `<div class="empty">No chosen merged situations returned.</div>`;
+        }
+
+        return `
+          <div class="solutions-grid">
+            ${situations
+              .map(
+                (situation) => `
+                  <article class="solution-card">
+                    <div class="solution-top">
+                      <div class="solution-title">${safe(situation.situation_id || "Situation")}</div>
+                      <div class="solution-tags">
+                        ${situation.chosen_solution_id ? `<div class="selection-badge">${safe(situation.chosen_solution_id)}</div>` : ""}
+                      </div>
+                    </div>
+                    ${renderField("Timestamp Range", formatTimestampRange(situation.timestamp_range))}
+                    ${renderField("Specific Problem", situation.specific_problem)}
+                    ${renderField("Framing", situation.framing_of_genericness)}
+                    ${renderField("Active Factors", formatMergedFactorRefs(situation.active_factor_ids, factorLookup))}
+                    ${renderField(
+                      "Chosen Strategy",
+                      (() => {
+                        const strategy = solutionLookup.get(String(situation.chosen_solution_id || ""));
+                        return strategy
+                          ? `${strategy.solution_id}: ${strategy.strategy_name}\n${strategy.general_description || ""}`.trim()
+                          : situation.chosen_solution_id || "—";
+                      })()
+                    )}
+                    ${renderField("Rationale", situation.rationale)}
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderMergedStrategies(strategies, factorLookup) {
+        if (!strategies || !strategies.length) {
+          return `<div class="empty">No merged solution strategies returned.</div>`;
+        }
+
+        return `
+          <div class="solutions-grid">
+            ${strategies
+              .map(
+                (strategy) => `
+                  <article class="solution-card">
+                    <div class="solution-top">
+                      <div class="solution-title">${safe(`${strategy.solution_id || "Strategy"}. ${strategy.strategy_name || "Untitled Strategy"}`)}</div>
+                      <div class="solution-tags">
+                        ${strategy.solution_type ? `<div class="tag">${safe(strategy.solution_type)}</div>` : ""}
+                      </div>
+                    </div>
+                    ${renderField("Operation Signature", strategy.operation_signature)}
+                    ${renderField("Description", strategy.general_description)}
+                    ${renderField("Relevant Factors", formatMergedFactorRefs(strategy.relevant_factor_ids, factorLookup))}
+                    ${renderField("Examples", formatMergedExamples(strategy.examples))}
+                    ${renderField("Transcript Grounding", formatMergedTranscriptGrounding(strategy.transcript_grounding))}
+                    ${renderField("Note", strategy.note)}
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderMergedContextualFactors(factors, highlightedFactorKeys, solutionLookup, usageMap) {
+        if (!factors || !factors.length) {
+          return `<div class="empty">No merged contextual factors returned.</div>`;
+        }
+
+        return `
+          <div class="factors-grid">
+            ${factors
+              .map((factor) => {
+                const factorKey = String(factor.factor_id || "");
+                const isLinked = highlightedFactorKeys.has(factorKey);
+                const usageLabel = isLinked ? formatMergedFactorUsageLabel(factorKey, usageMap) : "";
+                return `
+                  <article class="factor-card${isLinked ? " is-linked" : ""}">
+                    <div class="solution-top">
+                      <div class="factor-title">${safe(`${factor.factor_id || "Factor"}${factor.factor_name ? `. ${factor.factor_name}` : ""}`)}</div>
+                      <div class="solution-tags">
+                        ${factor.category ? `<div class="tag">${safe(factor.category)}</div>` : ""}
+                        ${usageLabel ? `<div class="tag">${safe(usageLabel)}</div>` : ""}
+                      </div>
+                    </div>
+                    ${isLinked ? `<div class="selection-badge" style="margin: 0 0 10px;">Used By Chosen Solution</div>` : ""}
+                    ${renderField("Description", factor.general_description)}
+                    ${renderField("Supports Solutions", formatMergedSolutionRefs(factor.supports_solutions, solutionLookup))}
+                  </article>
+                `
+              })
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderMergedSchemaItem(item) {
+        const factorLookup = buildLookup(item.all_contextual_factors, "factor_id");
+        const solutionLookup = buildLookup(item.all_solution_strategies, "solution_id");
+        const highlightedFactorKeys = extractMergedFocusedFactorKeys(item.situations);
+        const factorUsageMap = buildMergedFactorUsageMap(item.situations);
+
+        return `
+          <article class="schema-card">
+            <h3>Merged Schema</h3>
+
+            <div class="section-grid">
+              <section class="panel">
+                <h4>Problem</h4>
+                ${renderField("Timestamps", renderMergedTimestampSummary(item.situations))}
+                ${renderField("Problem Pattern", item.problem_pattern)}
+                ${renderField("Specific Problems", renderMergedProblemSummary(item.situations))}
+              </section>
+
+              <section class="panel">
+                <h4>Knowledge</h4>
+                ${renderField("Tacit Knowledge", item.shared_tacit_knowledge)}
+                ${renderField("Grounding", renderMergedGroundingSummary(item.situations, solutionLookup))}
+              </section>
+            </div>
+
+            <section class="panel" style="margin-bottom: 16px;">
+              <h4>All Contextual Factors</h4>
+              ${renderMergedContextualFactors(item.all_contextual_factors, highlightedFactorKeys, solutionLookup, factorUsageMap)}
+            </section>
+
+            <section class="panel" style="margin-bottom: 16px;">
+              <h4>Solutions</h4>
+              ${renderMergedStrategies(item.all_solution_strategies, factorLookup)}
+            </section>
+
+            <section class="panel">
+              <h4>Chosen Solution</h4>
+              ${renderMergedChosenSolutions(item.situations, factorLookup, solutionLookup)}
+            </section>
+          </article>
+        `;
+      }
+
+      function renderSchemaItem(item, index) {
+        const chosen = item.chosen_solution || {};
+        const contextual = item.contextual_factors || {};
+        const currentCase = contextual.current_case || {};
+        const chosenIndex = toSolutionIndex(chosen.solution_index);
+        const chosenSolution = chosenIndex !== null && Array.isArray(item.solutions) ? item.solutions[chosenIndex] : null;
+        const highlightedFactorKeys = extractFactorKeys(currentCase.most_important_factors || []);
+
+        if (chosenSolution && Array.isArray(chosenSolution.factors)) {
+          for (const key of extractFactorKeys(chosenSolution.factors)) {
+            highlightedFactorKeys.add(key);
+          }
+        }
+
+        return `
+          <article class="schema-card">
+            <h3>${safe(`Schema ${index + 1}`)}</h3>
+
+            <div class="section-grid">
+              <section class="panel">
+                <h4>Problem</h4>
+                ${renderField("Timestamp", item.timestamp)}
+                ${renderField("Specific Problem", item.problem && item.problem.specific_problem)}
+                ${renderField("Problem Pattern", item.problem && item.problem.problem_pattern)}
+              </section>
+
+              <section class="panel">
+                <h4>Knowledge</h4>
+                ${renderField("Tacit Knowledge", item.knowledge && item.knowledge.tacit_knowledge)}
+                ${renderField("Grounding", item.knowledge && item.knowledge.grounding)}
+              </section>
+            </div>
+
+            <section class="panel" style="margin-bottom: 16px;">
+              <h4>All Contextual Factors</h4>
+              ${renderFactors(contextual.all_factors, highlightedFactorKeys)}
+            </section>
+
+            <section class="panel" style="margin-bottom: 16px;">
+              <h4>Solutions</h4>
+              ${renderSolutions(item.solutions, chosenIndex)}
+            </section>
+
+            <section class="panel">
+              <h4>Chosen Solution</h4>
+              ${renderField("Raw Solution Index", chosen.solution_index === null || chosen.solution_index === undefined ? "null" : chosen.solution_index)}
+              ${renderField("Summary", chosen.solution_summary)}
+              ${renderField("Most Important Factors", (currentCase.most_important_factors || []).join("\n"))}
+              ${renderField("Decision Rationale", currentCase.decision_rationale)}
+            </section>
+          </article>
+        `;
+      }
+
+      function getGroupDisplayCount(group) {
+        if (group.schemaKind === "merged") {
+          const mergedItem = group.items[0] || {};
+          return Array.isArray(mergedItem.situations) ? mergedItem.situations.length : group.items.length;
+        }
+        return group.items.length;
+      }
+
+      function getGroupSolutionCount(group) {
+        if (group.schemaKind === "merged") {
+          const mergedItem = group.items[0] || {};
+          return Array.isArray(mergedItem.all_solution_strategies) ? mergedItem.all_solution_strategies.length : 0;
+        }
+        return group.items.reduce((itemSum, item) => itemSum + ((item.solutions || []).length || 0), 0);
+      }
+
+      function renderGroupContent(group) {
+        if (group.schemaKind === "merged") {
+          const mergedItem = group.items[0];
+          return mergedItem ? renderMergedSchemaItem(mergedItem) : `<div class="empty">No merged schema found.</div>`;
+        }
+        return group.items.length ? group.items.map((item, index) => renderSchemaItem(item, index)).join("") : `<div class="empty">No schema items found.</div>`;
+      }
+
+      async function loadJson(path) {
+        const response = await fetch(path);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${path}: ${response.status}`);
+        }
+        return response.json();
+      }
+
+      async function loadGroup(group) {
+        try {
+          const payload = await loadJson(group.file);
+          return {
+            ...group,
+            payload,
+            items: normalizeItems(payload),
+            schemaKind: detectSchemaKind(payload),
+            sourceType: "Live JSON",
+          };
+        } catch (error) {
+          const fallback = embeddedFallbacks[provider] && embeddedFallbacks[provider][group.folder];
+          if (fallback) {
+            return {
+              ...group,
+              payload: fallback,
+              items: normalizeItems(fallback),
+              schemaKind: detectSchemaKind(fallback),
+              sourceType: "Embedded Snapshot",
+              loadError: error.message,
+            };
+          }
+          throw error;
+        }
+      }
+
+      async function main() {
+        document.getElementById("providerBadge").textContent = `LLM used: ${provider}`;
+
+        const groups = await Promise.all(schemaSources.map(loadGroup));
+
+        document.getElementById("jumpbar").innerHTML = groups
+          .map((group) => `<a class="jump-link" href="#${safe(group.id)}">${safe(group.label)} (${getGroupDisplayCount(group)})</a>`)
+          .join("");
+
+        document.getElementById("content").innerHTML = groups
+          .map(
+            (group) => `
+              <section class="case-section" id="${safe(group.id)}">
+                <div class="case-header">
+                  <div>
+                    <h2>${safe(group.label)}</h2>
+                    <p>${safe(group.description)}</p>
+                  </div>
+                </div>
+                <div class="schema-stack">
+                  ${renderGroupContent(group)}
+                </div>
+                ${
+                  group.loadError
+                    ? `<div class="footnote">Live load failed and the page used the embedded fallback instead: ${safe(group.loadError)}</div>`
+                    : ""
+                }
+              </section>
+            `
+          )
+          .join("");
+      }
+
+      main().catch((error) => {
+        document.getElementById("content").innerHTML = `
+          <section class="error-card">
+            <h2>Unable to Load Visualizer Data</h2>
+            <p>${safe(error.message)}</p>
+            <p>
+              This page expects files like <code>test_0/structure_schema_${safe(provider)}.json</code>.
+              If you are using a different provider, add <code>?provider=claude</code> or
+              <code>?provider=gpt</code> to the URL after generating those files.
+            </p>
+          </section>
+        `;
+      });
+    </script>
+  </body>
+</html>

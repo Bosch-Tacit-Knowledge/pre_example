@@ -1,0 +1,63 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The transition from the family's Lazy Susan dynamic to teaching English in Taiwan feels abrupt, forced, and disconnected. Additionally, the connecting theme (acting as a 'table diplomat' to include quieter relatives) relies on a cliché cultural trope rather than a unique personal insight.",
+        "problem_pattern": "The Resume-Drop Metaphor: Forcing an unrelated, impressive extracurricular activity into a personal narrative by using a weak, generic thematic bridge, which breaks narrative cohesion and makes the essay read like a report."
+      },
+      "knowledge": {
+        "tacit_knowledge": "Narrative cohesion and unique storytelling are more valuable than cramming in impressive resume items. When a student tries to connect two vastly different settings (a family dinner table and a foreign classroom) using a generic theme (inclusivity), the essay loses its unique voice and feels manufactured. Furthermore, admissions officers easily spot cliché cultural tropes (e.g., 'what every Asian kid does for their family during a Lazy Susan') and prefer highly specific, quirky anecdotes (like writing a constitution).",
+        "grounding": "The expert states the Taiwan connection is 'dubious' and 'came a little bit out of left fields,' noting the paragraph 'feels like a report.' They contrast this with the earlier, more successful 'constitution' idea, calling the table diplomat scene unexceptional because it's 'what every Asian kid does.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Remove the disconnected extracurricular activity and relocate it to a different essay, using the freed-up space to expand on the unique, humorous core narrative.",
+          "example": "Cut the Taiwan teaching paragraph entirely (saving it for a supplemental essay) and instead expand the scene about humorously 'fighting against the monarchs' (the older relatives) at the family dinner table.",
+          "factors": [
+            "Narrative Cohesion",
+            "Uniqueness of the Anecdote",
+            "Alternative Essay Space"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Rewrite the thematic bridge to deeply intertwine the extracurricular activity with the specific, quirky framework established in the core narrative, rather than relying on a generic theme.",
+          "example": "Instead of using 'inclusivity' as the bridge, frame the Taiwan classroom explicitly through the lens of the 'Lazy Susan Constitution' rules or the humorous 'battling the monarchs' dynamic, drawing a direct, vivid behavioral parallel between managing Aunt Jessie and managing a specific stubborn student.",
+          "factors": [
+            "Narrative Cohesion"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert suggests cutting the jump to Taiwan, saving it for a supplemental essay, and focusing on 'nailing' the humorous moment of fighting the family 'monarchs.'"
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "Narrative Cohesion",
+            "description": "The degree to which a new scene naturally connects to and extends the essay's core metaphor without feeling forced or jarring."
+          },
+          {
+            "factor": "Uniqueness of the Anecdote",
+            "description": "Whether the narrative relies on common, expected tropes (e.g., typical family meal behaviors) or distinct, memorable, and quirky actions (e.g., writing a constitution for a Lazy Susan)."
+          },
+          {
+            "factor": "Alternative Essay Space",
+            "description": "The availability of supplemental essays where important but disconnected extracurricular achievements can be highlighted without ruining the main essay's narrative."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "Narrative Cohesion",
+            "Uniqueness of the Anecdote",
+            "Alternative Essay Space"
+          ],
+          "decision_rationale": "The expert recommends the removal strategy because the Taiwan transition completely breaks 'Narrative Cohesion' ('out of left fields'), and the setup relies on an anecdote lacking 'Uniqueness' ('what every Asian kid does'). Because 'Alternative Essay Space' exists (supplemental essays), cutting it does not mean the achievement is lost to the admissions committee."
+        }
+      },
+      "timestamp": "7:17"
+    }
+  ]
+}

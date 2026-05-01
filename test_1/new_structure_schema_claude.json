@@ -1,0 +1,244 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The Taiwan teaching paragraph feels like a report—it lists activities (weekly podcasts, tours, Q&A panels) without vivid storytelling or emotional depth, and it comes 'out of left field' with a dubious connection to the Lazy Susan theme.",
+        "problem_pattern": "A section shifts abruptly to a new context and resorts to résumé-style listing of accomplishments or activities rather than narrating a specific, vivid scene, breaking the essay's narrative tone and thematic coherence."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In personal essays, every scene or example must feel organically connected to the central metaphor or theme. When a new context is introduced, the transition must feel earned and the connection must be self-evident rather than forced. Listing activities ('we did X, Y, and Z') reads as a report or résumé rather than a story, which undermines the narrative voice. The reader should feel the thematic link immediately without having to be told it exists.",
+        "grounding": "The expert explicitly says 'it feels like a report,' 'it came a little bit out of left field,' and 'the connection in my professional opinion feels a little bit dubious,' indicating that both the tonal shift to reporting and the weak thematic bridge are the core issues."
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Remove the tangential context entirely and deepen the existing scene that is already working, adding more vivid detail, humor, or narrative tension to the current thematic thread.",
+          "example": "Instead of jumping to Taiwan teaching, expand the 'table diplomat fighting against the aging monarchs' scene with more funny, specific moments—e.g., dramatize a particular confrontation with Aunt Jessie over a hogged dish, using dialogue and sensory detail.",
+          "factors": [
+            "The existing scene has stronger narrative potential and humor than the tangential one",
+            "The essay's word count or structure doesn't require an additional context to demonstrate the theme",
+            "The tangential content can be repurposed elsewhere (e.g., supplemental essays)"
+          ]
+        },
+        {
+          "solution_type": "mentioned",
+          "solution": "Relocate the tangential material to a supplemental essay where it can be developed on its own terms without needing to serve the main essay's central metaphor.",
+          "example": "The Taiwan teaching experience—scrapping lesson plans, creating podcasts and Q&A panels—could become a strong 'meaningful extracurricular' or 'community contribution' supplemental essay where it doesn't need to tie back to the Lazy Susan.",
+          "factors": [
+            "The tangential content has genuine merit but doesn't serve the central metaphor",
+            "The application includes supplemental essay prompts where this material would fit naturally",
+            "Removing the content doesn't leave a gap in the main essay's arc"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "If keeping the tangential context, rewrite it as a specific narrative scene rather than a list, and strengthen the thematic bridge so the connection to the central metaphor feels organic and immediate.",
+          "example": "Instead of listing 'weekly podcasts, tours, Q&A panels,' narrate one specific classroom moment where the writer noticed a quiet student being overlooked—mirroring the Lazy Susan dynamic—and describe the precise action taken, using the same attentive, care-driven language used in the family dinner scenes.",
+          "factors": [
+            "The writer is committed to including this context for strategic reasons (e.g., showing breadth of impact)",
+            "The tangential scene can be reframed to mirror the central metaphor closely enough to feel thematically unified",
+            "There is enough word count to develop the scene narratively rather than as a summary"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Replace the tangential example with a different external context that has a more natural, self-evident connection to the central metaphor, requiring less forced bridging.",
+          "example": "Instead of Taiwan teaching, use a scene from another social context—perhaps a group project, a team, or a community gathering—where the writer's 'Lazy Susan instincts' of sharing, inclusion, and rotating attention manifest in a way that feels like a natural extension of the dinner table dynamics.",
+          "factors": [
+            "The writer has other experiences that more directly echo the central metaphor",
+            "The essay needs an external-to-family scene to show growth beyond the dinner table",
+            "The alternative context allows for vivid storytelling rather than activity listing"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert leans toward removing the Taiwan teaching paragraph and instead deepening the 'fighting against the monarchs' scene with more humor and vivid detail, as the first scene in this section has more narrative potential and thematic coherence."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The existing scene has stronger narrative potential and humor than the tangential one",
+            "description": "When a writer already has a scene with vivid characters, humor, and natural thematic alignment, it's more effective to develop that scene than to introduce a weaker one. The expert notes the first scene's 'fighting against monarchs' framing is funnier and more unique."
+          },
+          {
+            "factor": "The essay's word count or structure doesn't require an additional context to demonstrate the theme",
+            "description": "Personal essays have limited space. Adding a new context that requires its own setup and bridging language consumes words that could be used to deepen existing scenes."
+          },
+          {
+            "factor": "The tangential content can be repurposed elsewhere (e.g., supplemental essays)",
+            "description": "The expert explicitly suggests this material might work better as a supplemental essay, indicating that valuable content doesn't need to be forced into the main essay."
+          },
+          {
+            "factor": "The tangential content has genuine merit but doesn't serve the central metaphor",
+            "description": "The Taiwan teaching experience is meaningful, but its connection to the Lazy Susan metaphor feels forced. Good content in the wrong essay weakens both the content and the essay."
+          },
+          {
+            "factor": "The writer is committed to including this context for strategic reasons (e.g., showing breadth of impact)",
+            "description": "Sometimes writers want to demonstrate growth across multiple domains. If so, the tangential context must be rewritten to feel narratively organic rather than listed."
+          },
+          {
+            "factor": "The alternative context allows for vivid storytelling rather than activity listing",
+            "description": "Any scene included in the essay must be told as a story with specific details, not as a summary of activities. Report-style writing breaks the narrative voice."
+          },
+          {
+            "factor": "The scene's uniqueness and distinctiveness relative to common applicant experiences",
+            "description": "The expert notes that fighting for family members at a Lazy Susan is 'what every Asian kid does'—it's not exceptional. Scenes need to feel distinctive to stand out in an admissions context."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The existing scene has stronger narrative potential and humor than the tangential one",
+            "The tangential content has genuine merit but doesn't serve the central metaphor",
+            "The tangential content can be repurposed elsewhere (e.g., supplemental essays)"
+          ],
+          "decision_rationale": "The expert identifies that the Taiwan paragraph breaks narrative tone (reads as a report), introduces a context with a forced thematic connection ('dubious'), and comes at the expense of developing a scene that already has more humor and uniqueness. The expert's preference is to cut the Taiwan content (possibly relocating it to a supplemental essay) and invest the space in making the monarchs scene more vivid and funny, because the essay's strength lies in its playful, specific family storytelling rather than in demonstrating professional impact."
+        }
+      }
+    },
+    {
+      "problem": {
+        "specific_problem": "The 'table diplomat fighting against the aging monarchs' scene, while more promising than the Taiwan paragraph, describes behavior that is too common and relatable among Asian families to feel distinctive or exceptional in a college essay.",
+        "problem_pattern": "An essay scene describes an experience that, while personally meaningful, is too universally shared within its cultural context to stand out as distinctive, undermining the essay's ability to reveal something uniquely memorable about the applicant."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In competitive admissions essays, the bar is not just 'interesting' or 'meaningful'—it's 'top 1% distinctive.' A scene must make the reader feel the applicant's experience or perspective is exceptional, not typical. Even culturally rich material needs a unique angle, unexpected humor, or surprising specificity to elevate it above what many applicants from similar backgrounds might write.",
+        "grounding": "The expert says 'essentially what you're doing here is what every Asian kid does for their family during a Lazy Susan. So it's not like, wow, this is top 1%. This is exceptional. This is above and beyond. That's where my qualm lies.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Elevate a common experience by amplifying the most distinctive, humorous, or unexpected angle within it, making the familiar feel fresh and uniquely personal.",
+          "example": "Instead of generally describing how the writer spoke up for quieter children and sacrificed turns, dramatize one specific, funny confrontation with the 'aging monarchs'—perhaps a moment with a particular uncle's absurd excuse about poor eyesight, using dialogue and comic timing to make it feel like only this writer could have written it.",
+          "factors": [
+            "The underlying experience is common but contains specific moments that are uniquely vivid or funny",
+            "The essay's established tone supports humor and playfulness",
+            "The writer has enough specific memory detail to dramatize rather than summarize"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Reframe the common experience through a unique conceptual lens or metaphor that transforms how the reader perceives it, adding intellectual or emotional depth that distinguishes the writer's perspective.",
+          "example": "Rather than simply describing table diplomacy, the writer could develop the 'constitution' metaphor further—perhaps drafting amendments, holding 'votes,' or creating a mock-governmental structure around the Lazy Susan that reveals both humor and the writer's distinctive way of thinking about fairness and community.",
+          "factors": [
+            "The essay already has a strong conceptual frame (e.g., the constitution metaphor) that can be extended",
+            "The writer's distinctive quality is more about their perspective or intellectual playfulness than the experience itself",
+            "The common experience needs a conceptual reframing rather than just more detail to feel distinctive"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Replace or supplement the common experience with a more unusual or unexpected example that illustrates the same theme but catches the reader off guard.",
+          "example": "Instead of generic table diplomacy, describe an unusual Lazy Susan moment—perhaps a time the writer's advocacy for a quieter family member led to an unexpected conflict, revelation, or emotional breakthrough that goes beyond the expected 'I helped others get food' narrative.",
+          "factors": [
+            "The writer has access to more unusual moments within the same thematic frame",
+            "The current scene cannot be sufficiently elevated through humor or detail alone",
+            "The essay needs a narrative surprise or turn to maintain reader engagement"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert suggests focusing on 'nailing this moment and fighting against the monarchs in a really funny way,' indicating the solution is to amplify the humor and specificity of the existing scene to make a common experience feel uniquely vivid and memorable."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The underlying experience is common but contains specific moments that are uniquely vivid or funny",
+            "description": "When the raw material is relatable, the writer must find the one moment within it that no one else would describe the same way. Humor and sensory specificity are the primary tools."
+          },
+          {
+            "factor": "The essay's established tone supports humor and playfulness",
+            "description": "The first section of the essay (the constitution, the 21 rules, the scallion pancake 'Shrrkkk!') establishes a playful, humorous voice. The monarchs scene should match this energy."
+          },
+          {
+            "factor": "The writer has enough specific memory detail to dramatize rather than summarize",
+            "description": "Elevation requires concrete details—dialogue, character quirks, sensory moments. If the writer can't recall specifics, the scene will remain generic."
+          },
+          {
+            "factor": "The essay already has a strong conceptual frame (e.g., the constitution metaphor) that can be extended",
+            "description": "The constitution/rules metaphor from the opening could be threaded through later sections, giving the essay conceptual unity and intellectual playfulness."
+          },
+          {
+            "factor": "The writer's distinctive quality is more about their perspective or intellectual playfulness than the experience itself",
+            "description": "When the experience is common, the differentiator is voice and framing. The writer's personality must shine through how they tell the story, not just what happened."
+          },
+          {
+            "factor": "The essay needs a narrative surprise or turn to maintain reader engagement",
+            "description": "Readers of admissions essays encounter similar themes repeatedly. A scene needs an unexpected moment—a twist, a punchline, an emotional shift—to remain engaging."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The underlying experience is common but contains specific moments that are uniquely vivid or funny",
+            "The essay's established tone supports humor and playfulness"
+          ],
+          "decision_rationale": "The expert's core concern is that the monarchs scene, as written, doesn't clear the 'top 1%' bar because it describes something many applicants from similar backgrounds could write. However, the expert sees potential in the scene's humor (the 'aging monarchs' framing, the poor eyesight excuse) and recommends 'nailing this moment in a really funny way.' The essay's established playful tone in earlier sections gives permission for comic amplification, which is the most natural way to elevate this particular material."
+        }
+      }
+    },
+    {
+      "problem": {
+        "specific_problem": "The expert deletes phrases like 'and disconnected' and 'Encouraging mutual dialogue,' which are generic, abstract descriptors that add no vivid or specific meaning to the paragraph.",
+        "problem_pattern": "Using filler phrases and abstract descriptors that sound impressive but add no concrete meaning, padding sentences without advancing the narrative or deepening the reader's understanding."
+      },
+      "knowledge": {
+        "tacit_knowledge": "Every word in a tight personal essay must earn its place. Abstract, feel-good phrases ('encouraging mutual dialogue,' 'lost and disconnected') signal to the reader that the writer is filling space rather than showing something real. Cutting these phrases often makes the remaining sentence sharper and more honest.",
+        "grounding": "The expert silently deletes 'and disconnected' (after 'students were lost') and 'Encouraging mutual dialogue' without verbal explanation, suggesting these are recognized immediately as filler that weakens rather than strengthens the prose."
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Delete abstract filler phrases that don't add concrete meaning, trusting that the remaining words carry sufficient weight.",
+          "example": "Cutting 'and disconnected' after 'students were lost' and removing 'Encouraging mutual dialogue' tightens the prose without losing any real content.",
+          "factors": [
+            "The phrase is abstract and doesn't add new information beyond what adjacent words already convey",
+            "The essay is over its ideal word count and needs trimming",
+            "The surrounding context already communicates the idea being expressed by the filler"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Replace abstract descriptors with a specific, concrete detail or action that shows rather than tells the same idea.",
+          "example": "Instead of 'some students were lost and disconnected,' describe what being 'lost' actually looked like: 'After noticing one student staring blankly at his desk while others laughed at a joke he couldn't follow...'",
+          "factors": [
+            "The abstract phrase points to a moment that could be dramatized with specific detail",
+            "The writer has enough space to expand rather than just cut",
+            "The scene is being kept in the essay and needs strengthening rather than removal"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert simply deletes the filler phrases, choosing efficiency over replacement, likely because the entire paragraph is being flagged for removal anyway."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The phrase is abstract and doesn't add new information beyond what adjacent words already convey",
+            "description": "Redundant abstractions (e.g., 'lost and disconnected' when 'lost' alone suffices) dilute prose. Cutting is the simplest fix."
+          },
+          {
+            "factor": "The essay is over its ideal word count and needs trimming",
+            "description": "When space is limited, every filler phrase represents a missed opportunity to include something vivid or meaningful."
+          },
+          {
+            "factor": "The surrounding context already communicates the idea being expressed by the filler",
+            "description": "If the reader can infer the meaning from context, the explicit phrase is unnecessary and slows the reading pace."
+          },
+          {
+            "factor": "The scene is being kept in the essay and needs strengthening rather than removal",
+            "description": "If the paragraph is being retained, replacing filler with concrete detail is preferable to simple deletion. But if the paragraph is likely being cut entirely, simple deletion is sufficient during the editing pass."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The phrase is abstract and doesn't add new information beyond what adjacent words already convey",
+            "The scene is being kept in the essay and needs strengthening rather than removal"
+          ],
+          "decision_rationale": "The expert is likely making quick deletions as part of reading through a paragraph that will ultimately be recommended for removal. The deletions demonstrate the expert's instinct for identifying abstract filler, even though the larger recommendation is to cut or replace the entire section."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The first section of the essay ends with the author rattling off all 21 rules to relatives, rather than ending on the most important and thematically central rule (Rule #1). The climactic moment—the specific rule about not placing food on others' plates—gets buried instead of being spotlighted as the section's punchline.",
+        "problem_pattern": "A section or scene fails to end on its strongest, most thematically resonant detail, instead diluting the impact by ending on a more generic or less memorable moment."
+      },
+      "knowledge": {
+        "tacit_knowledge": "The ending of a section or scene should land on the most specific, vivid, and thematically important detail. In essay writing, the 'last thing the reader reads' in a section carries disproportionate weight. Ending on a concrete, memorable detail (like a specific rule) is more powerful than ending on a general action (like rattling off 21 rules). This is a form of strategic emphasis through positioning.",
+        "grounding": "The expert explicitly says 'I think it would be more powerful to end with rule number one' and then revises the text so the paragraph climaxes with the announcement of Rule #1: 'DO NOT place food on other people's plates.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Restructure the section so that the most thematically important and specific detail is placed at the end, serving as the section's punchline or climactic beat.",
+          "example": "Instead of ending with 'rattled off all 21 rules on the list,' revise to end with the protagonist proudly announcing Rule #1: 'DO NOT place food on other people's plates,' which is the rule that drives the rest of the essay.",
+          "factors": [
+            "The buried detail is the thematic linchpin of the essay",
+            "The current ending is generic and lacks specificity"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Cut or compress less important details earlier in the section to create more space and emphasis for the key detail at the end.",
+          "example": "Reduce the description of brainstorming the list with William and instead expand the moment of announcing Rule #1, perhaps adding a dramatic beat (e.g., the family's reaction) to heighten the punchline.",
+          "factors": [
+            "The section has limited word count available",
+            "There are multiple competing details that dilute focus"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert restructured the paragraph so it ends with the protagonist proudly announcing Rule #1: 'DO NOT place food on other people's plates,' making the thematic centerpiece the section's punchline."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The buried detail is the thematic linchpin of the essay",
+            "description": "When a detail recurs throughout the essay and drives the narrative arc, it needs prominent positioning—especially at the end of the section that introduces it."
+          },
+          {
+            "factor": "The current ending is generic and lacks specificity",
+            "description": "Ending on 'rattled off all 21 rules' is vague and doesn't give the reader a concrete image or idea to hold onto, while 'DO NOT place food on other people's plates' is specific and memorable."
+          },
+          {
+            "factor": "The section has limited word count available",
+            "description": "In a college essay with strict length constraints, every sentence must earn its place, making it more important to cut generic moments in favor of specific ones."
+          },
+          {
+            "factor": "There are multiple competing details that dilute focus",
+            "description": "When a section tries to cover too many details, the most important one can get lost, requiring the writer to prioritize and reorder."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The buried detail is the thematic linchpin of the essay",
+            "The current ending is generic and lacks specificity"
+          ],
+          "decision_rationale": "Rule #1 is the central motif of the entire essay—the author later abolishes it, then deliberately violates it in the conclusion. By ending the opening section on this specific rule, the expert ensures the reader registers it as important, creating a satisfying setup for the reversal that follows."
+        }
+      }
+    },
+    {
+      "problem": {
+        "specific_problem": "The paragraph about persuading brother William to try the scallion pancake feels disjointed and unrelated to the Constitution/Rule #1 theme. The brother subplot introduces a tangential anecdote that doesn't connect back to the central motif of placing food on someone else's plate.",
+        "problem_pattern": "A scene or anecdote within a thematic/motif essay does not clearly connect to the essay's central motif or throughline, causing the narrative to feel fragmented and the section to feel out of place."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In a motif-based or montage essay, every scene must clearly tie back to the central motif or symbol. Each anecdote should be a variation on the same theme, not just loosely related. If a scene doesn't advance or complicate the motif, it breaks the essay's coherence. The reader should feel each scene is a new 'lens' on the same idea, not a detour.",
+        "grounding": "The expert says 'this paragraph felt kind of disjointed and out of place because it's not really related to this rule or the Constitution' and suggests that if the brother scene were reframed as the author placing food on his brother's plate, 'that would make a little bit more sense.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Reframe the tangential anecdote so that it explicitly connects to the central motif, using the motif's language or actions to bridge the gap.",
+          "example": "Instead of the author verbally persuading William to try the scallion pancake, rewrite the scene so the author physically places the scallion pancake on William's plate—directly connecting to Rule #1 ('do not place food on other people's plates') and showing the author beginning to adopt the grandparents' form of care.",
+          "factors": [
+            "The anecdote has potential thematic relevance but lacks explicit connection to the motif",
+            "The essay uses a motif/montage structure requiring clear thematic throughline"
+          ]
+        },
+        {
+          "solution_type": "mentioned",
+          "solution": "Remove the tangential anecdote entirely and instead deepen the existing scene that is most thematically aligned, giving it more space for realization and emotional development.",
+          "example": "Cut the William/scallion pancake paragraph and expand the grandparents scene, showing more of the protagonist's internal shift from viewing food-sharing as a boundary violation to recognizing it as cultural love.",
+          "factors": [
+            "The essay is constrained by word count",
+            "The existing primary scene has untapped emotional or thematic depth",
+            "The protagonist's arc of realization in the first scene is underdeveloped"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Keep the tangential anecdote but move it to a later section of the essay where the protagonist is more active and the connection can be made more naturally as a progression of the motif.",
+          "example": "Move the William scene to a later section where the author is described as a 'table diplomat,' showing how the author now actively places food on others' plates (including William's) as an evolved form of the grandparents' love.",
+          "factors": [
+            "The anecdote demonstrates growth or agency that belongs later in the narrative arc",
+            "The essay follows a chronological or developmental progression"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 1,
+        "solution_summary": "The expert's instinct is to cut the William subplot from the first section and instead deepen the grandparents scene, focusing on the protagonist's realization that placing food on someone's plate is a cultural expression of love rather than a boundary violation."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The anecdote has potential thematic relevance but lacks explicit connection to the motif",
+            "description": "When an anecdote is loosely related but doesn't use the motif's specific language or actions, it can be salvaged by reframing rather than cutting."
+          },
+          {
+            "factor": "The essay uses a motif/montage structure requiring clear thematic throughline",
+            "description": "Montage essays depend on each scene clearly echoing the central motif; any scene that doesn't creates a sense of fragmentation."
+          },
+          {
+            "factor": "The essay is constrained by word count",
+            "description": "When space is limited, it's better to develop one strong scene deeply than to include multiple underdeveloped ones."
+          },
+          {
+            "factor": "The existing primary scene has untapped emotional or thematic depth",
+            "description": "If the grandparents scene can be expanded to show more realization and emotional nuance, it's more efficient to invest words there."
+          },
+          {
+            "factor": "The protagonist's arc of realization in the first scene is underdeveloped",
+            "description": "When the first scene's internal shift is told rather than shown, adding more detail to that scene creates a stronger foundation for the rest of the essay."
+          },
+          {
+            "factor": "The anecdote demonstrates growth or agency that belongs later in the narrative arc",
+            "description": "If the anecdote shows the protagonist being active and persuasive, it may fit better in a later section where growth is expected."
+          },
+          {
+            "factor": "The essay follows a chronological or developmental progression",
+            "description": "In essays that move from passivity to agency, earlier scenes should feature more observation/realization and later scenes should feature more action."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The essay uses a motif/montage structure requiring clear thematic throughline",
+            "The protagonist's arc of realization in the first scene is underdeveloped",
+            "The existing primary scene has untapped emotional or thematic depth"
+          ],
+          "decision_rationale": "The expert identifies that the William anecdote doesn't connect to Rule #1 or the Constitution motif, and that the grandparents scene—which is directly about the motif—is underdeveloped. Since this is the essay's opening scene and the protagonist should be least active here (per the expert's montage essay framework), deepening the realization about grandparents' cultural love is more appropriate than showing the protagonist actively persuading his brother."
+        }
+      }
+    },
+    {
+      "problem": {
+        "specific_problem": "In the first section, the grandparents' reaction to the Constitution is told rather than shown—the original draft jumps to 'It wasn't until I wrote these rules that I realized my grandparents had been violating Rule #1 all along' without dramatizing the moment of the grandparents ignoring the rules. The realization is stated abstractly rather than experienced through a scene.",
+        "problem_pattern": "A key narrative turning point or realization is summarized or stated abstractly ('I realized...') instead of being dramatized through concrete action, dialogue, and sensory detail, weakening the emotional impact and reader engagement."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In narrative essays, the most powerful moments of realization should emerge from dramatized scenes—showing characters acting, speaking, and reacting—rather than being declared by the narrator. When a reader experiences the moment through concrete detail, the insight feels earned rather than stated. This is especially important for turning points where the protagonist's understanding shifts, because the reader needs to feel the shift happening in real time.",
+        "grounding": "The expert rewrites the scene to show the grandparents' reaction beat by beat: 'Yeah, smiled. Then nodded. Then place more eggplant on his dish... casually explaining that this was a must try dish.' The expert also explains that 'we expect for the Constitution to work... and we debunk the reader's assumptions by showing that the Constitution was a great attempt, but it doesn't work. It fails.' This emphasis on showing the failure through action rather than narration reveals the expert's commitment to dramatization."
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Replace abstract realization statements with a dramatized scene that shows characters acting and reacting in real time, allowing the insight to emerge from the action rather than being stated by the narrator.",
+          "example": "Instead of 'I realized my grandparents had been violating Rule #1 all along,' the expert writes a scene where the grandparents smile, nod, and then immediately put more food on the protagonist's plate—casually explaining it's a must-try dish—followed by the uncle's boisterous laugh and comment 'This is their way of showing love... One day you'll miss this.' The realization emerges from the dramatized moment.",
+          "factors": [
+            "The moment is a key turning point or realization in the narrative",
+            "The original text uses 'I realized' or similar abstract framing",
+            "There are characters present whose actions and dialogue can convey the insight"
+          ]
+        },
+        {
+          "solution_type": "mentioned",
+          "solution": "Use narrative misdirection: set up the reader to expect one outcome (the rules will work), then subvert it with a dramatized failure, making the turning point more surprising and memorable.",
+          "example": "The expert structures the revised scene so the reader expects the Constitution to succeed—the protagonist announces Rule #1 proudly—but the grandparents simply smile and continue putting food on his plate, subverting expectations and making the failure more impactful and humorous.",
+          "factors": [
+            "The essay has a setup that naturally creates reader expectations",
+            "The subversion reveals something meaningful about the essay's theme",
+            "The tone of the essay supports humor or irony"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Introduce a secondary character's voice or perspective to externalize the protagonist's realization, using dialogue from someone else to articulate the insight the protagonist is beginning to grasp.",
+          "example": "The expert adds the uncle's line: 'This is their way of showing love... One day you'll miss this'—using a secondary character to verbalize the cultural insight, which feels more natural than the protagonist stating 'I realized.'",
+          "factors": [
+            "The protagonist is young or not yet able to articulate the insight themselves",
+            "A secondary character is present who has wisdom or perspective the protagonist lacks",
+            "The essay benefits from multiple voices to create richness"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert rewrites the grandparents scene as a fully dramatized moment with beat-by-beat action (smiling, nodding, placing food, explaining), dialogue from the uncle, and sensory details, replacing the abstract 'I realized' with a lived experience that allows the reader to feel the protagonist's shift in understanding."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The moment is a key turning point or realization in the narrative",
+            "description": "Turning points carry the most thematic weight and deserve the most vivid, detailed treatment."
+          },
+          {
+            "factor": "The original text uses 'I realized' or similar abstract framing",
+            "description": "Abstract realization statements signal an opportunity to dramatize; they are a common novice pattern that weakens impact."
+          },
+          {
+            "factor": "There are characters present whose actions and dialogue can convey the insight",
+            "description": "When the scene includes other people (grandparents, uncle), their behavior can externalize the lesson without the narrator having to state it."
+          },
+          {
+            "factor": "The essay has a setup that naturally creates reader expectations",
+            "description": "When the reader is led to expect something (the rules will work), subverting that expectation through dramatized failure creates a more engaging reading experience."
+          },
+          {
+            "factor": "The subversion reveals something meaningful about the essay's theme",
+            "description": "The failure of the Constitution reveals the essay's central theme: that placing food on someone's plate is an act of love, not a boundary violation."
+          },
+          {
+            "factor": "The tone of the essay supports humor or irony",
+            "description": "The essay's playful tone (childish rebellion, Constitution for a Lazy Susan) supports a humorous subversion where the grandparents simply ignore the rules."
+          },
+          {
+            "factor": "The protagonist is young or not yet able to articulate the insight themselves",
+            "description": "When the protagonist is a child, having an older character voice the lesson feels more natural and avoids implausible self-awareness."
+          },
+          {
+            "factor": "A secondary character is present who has wisdom or perspective the protagonist lacks",
+            "description": "The uncle's presence allows the lesson to be delivered through dialogue rather than narration."
+          },
+          {
+            "factor": "The essay benefits from multiple voices to create richness",
+            "description": "Including dialogue from different family members makes the scene feel alive and communal, fitting the essay's theme of family connection."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The moment is a key turning point or realization in the narrative",
+            "The original text uses 'I realized' or similar abstract framing",
+            "The essay has a setup that naturally creates reader expectations",
+            "The protagonist is young or not yet able to articulate the insight themselves"
+          ],
+          "decision_rationale": "The grandparents scene is the essay's foundational turning point—where the protagonist first begins to understand that food-sharing is love. The original draft states this abstractly ('I realized'), but the expert recognizes that dramatizing the grandparents' stubborn, loving defiance of the rules (and having the uncle articulate the cultural lesson) is far more powerful. The protagonist's youth makes it natural to have the insight come from outside rather than from within, and the essay's playful tone supports the humorous misdirection of the Constitution failing."
+        }
+      }
+    },
+    {
+      "problem": {
+        "specific_problem": "The first section shows the protagonist being too active too early—creating a Constitution, persuading his brother—when the narrative arc of a motif/montage essay requires the protagonist to start as more passive and observational, becoming increasingly active in later sections.",
+        "problem_pattern": "In a multi-scene or montage essay, the protagonist's level of agency does not properly escalate across scenes; the first scene shows too much initiative or action, leaving insufficient room for growth and diminishing the sense of progression."
+      },
+      "knowledge": {
+        "tacit_knowledge": "In montage or motif-based essays, the narrative arc should follow a trajectory from passivity to agency. The first scene typically features the protagonist at their least active—observing, being acted upon, or having a realization—while later scenes show increasing initiative, impact, and 'superhero-esque' action. This creates a satisfying sense of growth and development. If the protagonist is too active in the first scene, the essay has nowhere to go, and later scenes can't demonstrate meaningful progression.",
+        "grounding": "The expert explicitly states: 'when it comes to montage essays, motif essays, the first moment is typically you're the least active, you realize something, there's more problems. And then as the story progresses... you become more active, you become more superhero-esque.' The expert also notes 'the second and third scene should of course feature more action. And instead of the reader just kind of sitting there realizing something, we need to see impact.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Restructure the first scene to be more 'background problem oriented'—emphasizing observation, realization, and the problem being encountered—while reserving active problem-solving and initiative for later scenes.",
+          "example": "In the first scene, the protagonist announces Rule #1 but then watches it fail as the grandparents lovingly ignore it. The protagonist's role is primarily reactive—realizing something about cultural love—rather than actively persuading anyone. The active persuasion (brother, students, ordering for grandparents) is saved for later sections.",
+          "factors": [
+            "The essay uses a montage/motif structure with multiple scenes",
+            "The first scene currently shows the protagonist being too active or solving problems",
+            "Later scenes need room to demonstrate escalating agency and impact"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Redistribute the protagonist's active moments across the essay, moving high-agency anecdotes from earlier scenes to later ones, and replacing them with more observational or receptive moments in the opening.",
+          "example": "Move the brother persuasion anecdote to a later section (perhaps the 'table diplomat' section) where it demonstrates the protagonist actively applying the lesson learned from the grandparents, and replace it in the first section with more internal reflection or observation about the grandparents' behavior.",
+          "factors": [
+            "The essay has anecdotes that demonstrate different levels of protagonist agency",
+            "There are natural chronological or developmental reasons to reorder scenes",
+            "The essay's later sections currently lack concrete demonstrations of the protagonist's growth"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert advises making the first scene more 'background problem oriented' with the protagonist primarily observing and realizing (watching the grandparents lovingly ignore the rules), while later scenes escalate to show more action and impact."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "The essay uses a montage/motif structure with multiple scenes",
+            "description": "Montage essays require each scene to serve a distinct function in a progression; if the first scene does too much, the structure collapses."
+          },
+          {
+            "factor": "The first scene currently shows the protagonist being too active or solving problems",
+            "description": "When the protagonist is already persuading others and taking initiative in the opening, there's no room for visible growth."
+          },
+          {
+            "factor": "Later scenes need room to demonstrate escalating agency and impact",
+            "description": "The essay's middle and end sections must show the protagonist doing more than the opening, or the arc feels flat."
+          },
+          {
+            "factor": "The essay has anecdotes that demonstrate different levels of protagonist agency",
+            "description": "Some anecdotes (realizing grandparents' love) are more passive, while others (persuading brother, teaching students) are more active—these can be strategically ordered."
+          },
+          {
+            "factor": "There are natural chronological or developmental reasons to reorder scenes",
+            "description": "The protagonist is youngest in the first scene, which naturally supports a more passive, observational role."
+          },
+          {
+            "factor": "The essay's later sections currently lack concrete demonstrations of the protagonist's growth",
+            "description": "If later sections are mostly reflective rather than action-oriented, they may need the active anecdotes currently misplaced in the opening."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "The essay uses a montage/motif structure with multiple scenes",
+            "The first scene currently shows the protagonist being too active or solving problems",
+            "Later scenes need room to demonstrate escalating agency and impact"
+          ],
+          "decision_rationale": "The expert recognizes that the first scene has the protagonist both creating a Constitution and actively persuading his brother—both high-agency actions that leave little room for growth. Since the protagonist is implied to be young in this scene, a more natural arc would have them passively experiencing the grandparents' loving defiance and having a realization, reserving active intervention for later scenes where they are older and more capable. This creates the passivity-to-agency progression that makes montage essays compelling."
+        }
+      }
+    }
+  ]
+}

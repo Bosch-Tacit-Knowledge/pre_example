@@ -1,0 +1,60 @@
+{
+  "schema_items": [
+    {
+      "problem": {
+        "specific_problem": "The writer abruptly transitions from a personal anecdote about being a 'table diplomat' at family dinners (Lazy Susan) to a seemingly unrelated extracurricular activity (teaching English in Taiwan). The expert notes this shift feels 'out of left field,' 'dubious,' and reads like a 'report.' Additionally, the foundational scene of spinning the Lazy Susan for relatives is deemed too culturally generic ('what every Asian kid does') compared to the earlier, more unique 'constitution' metaphor.",
+        "problem_pattern": "Forced extracurricular insertion (resume-stuffing) combined with cliché narrative tropes. The writer abruptly breaks the narrative flow of a personal essay to insert an achievement, resulting in a disjointed, 'report'-like tone. Furthermore, the core narrative relies on a generic cultural experience rather than a highly unique personal angle."
+      },
+      "knowledge": {
+        "tacit_knowledge": "Admissions officers value cohesive, deeply personal narratives over essays that try to forcefully pack in impressive extracurriculars. If a pivot to an achievement doesn't organically flow from the essay's core theme, it reads as inauthentic and 'dubious.' Furthermore, personal anecdotes must go beyond common cultural tropes; they require a highly specific, idiosyncratic lens (like the 'constitution' idea) to elevate them into the 'top 1%' of essays.",
+        "grounding": "The expert explicitly states the Taiwan connection feels 'dubious' and 'out of left field,' suggesting it belongs in a 'supplemental essay.' They also compare the generic 'fighting monarchs' scene to the earlier 'constitution' scene, noting the latter was 'more unique' while the former is just 'what every Asian kid does' and not 'exceptional.'"
+      },
+      "solutions": [
+        {
+          "solution_type": "mentioned",
+          "solution": "Remove the disconnected extracurricular activity and re-focus on expanding the core narrative scene to make it more unique and entertaining.",
+          "example": "Delete the paragraph about teaching English in Taiwan (saving it for a supplemental essay) and instead expand on the 'fighting against the monarchs' dinner table scene. Inject more humor and specific, unique details to elevate it beyond a generic cultural trope.",
+          "factors": [
+            "Availability of supplemental essays",
+            "Uniqueness of the core narrative scene"
+          ]
+        },
+        {
+          "solution_type": "extended",
+          "solution": "Strengthen the thematic bridge to make the transition to the extracurricular activity feel organic rather than forced.",
+          "example": "Instead of abruptly stating 'I view my classroom the same way,' rewrite the transition to show exactly how specific 'diplomatic' tactics learned at the Lazy Susan directly informed the pedagogical strategies used in the Taiwan classroom, maintaining the narrative tone instead of switching to a 'report' style.",
+          "factors": [
+            "Relevance of the extracurricular to the core theme"
+          ]
+        }
+      ],
+      "chosen_solution": {
+        "solution_index": 0,
+        "solution_summary": "The expert suggests cutting the Taiwan classroom paragraph to use in a supplemental essay, and instead focusing on 'nailing' the dinner table scene by making the fight against the 'monarchs' funnier and more unique."
+      },
+      "contextual_factors": {
+        "all_factors": [
+          {
+            "factor": "Availability of supplemental essays",
+            "description": "If the student has other essays (supplementals) where they can discuss their extracurricular achievements, it is safer to remove forced extracurriculars from the main personal statement to preserve narrative integrity."
+          },
+          {
+            "factor": "Uniqueness of the core narrative scene",
+            "description": "If the base story relies on a common trope, the writer must dedicate more word count to elevating that specific scene with humor and unique details, rather than moving away from it prematurely."
+          },
+          {
+            "factor": "Relevance of the extracurricular to the core theme",
+            "description": "If the extracurricular genuinely and deeply connects to the personal metaphor, it can be kept by rewriting the transition; if the connection is superficial, it should be cut."
+          }
+        ],
+        "current_case": {
+          "most_important_factors": [
+            "Availability of supplemental essays",
+            "Uniqueness of the core narrative scene"
+          ],
+          "decision_rationale": "The expert notes that the 'Taiwan' content would be better suited for a supplemental essay (leveraging the availability of other application spaces). Because the current 'Lazy Susan' scene lacks the uniqueness of the first paragraph ('what every Asian kid does'), the expert prioritizes fixing the generic nature of the core narrative over keeping the disconnected extracurricular."
+        }
+      }
+    }
+  ]
+}
